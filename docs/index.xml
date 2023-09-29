@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PRUEBA</title>
+    <link>https://example.org/</link>
+    <description>Recent content on PRUEBA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Sep 2023 20:20:16 +0200</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Segundo_post</title>
+      <link>https://example.org/posts/segundo_post/</link>
+      <pubDate>Fri, 22 Sep 2023 20:20:16 +0200</pubDate>
+      
+      <guid>https://example.org/posts/segundo_post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Primer_post</title>
+      <link>https://example.org/posts/primer_post/</link>
+      <pubDate>Fri, 22 Sep 2023 20:19:03 +0200</pubDate>
+      
+      <guid>https://example.org/posts/primer_post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Main</title>
+      <link>https://example.org/main/</link>
+      <pubDate>Fri, 22 Sep 2023 19:39:21 +0200</pubDate>
+      
+      <guid>https://example.org/main/</guid>
+      <description>TAREA MARKDOWN ##WIKIPEDIA
+Markdown es un lenguaje de marcado ligero creado por John Gruber y Aaron Swartz que trata de conseguir la máxima legibilidad y facilidad de publicación tanto en su forma de entrada como de salida, inspirándose en muchas convenciones existentes para marcar mensajes de correo electrónico usando texto plano.
+###Historia
+John Gruber creó el lenguaje Markdown en 2004, con una ayuda importante de Aaron Swartz en la sintaxis. Gruber tenía la meta de hacer que la gente «pudiera escribir usando un formato de texto llano fácil de leer, fácil de escribir y con la posibilidad de convertir su documento en HTML válido».</description>
+    </item>
+    
+  </channel>
+</rss>
