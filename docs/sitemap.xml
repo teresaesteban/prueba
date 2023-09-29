@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://teresaesteban.github.io/prueba/posts/</loc>
     <lastmod>2023-09-22T20:20:16+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>https://teresaesteban.github.io/prueba/</loc>
     <lastmod>2023-09-22T20:20:16+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/segundo_post/</loc>
+    <loc>https://teresaesteban.github.io/prueba/posts/segundo_post/</loc>
     <lastmod>2023-09-22T20:20:16+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/primer_post/</loc>
+    <loc>https://teresaesteban.github.io/prueba/posts/primer_post/</loc>
     <lastmod>2023-09-22T20:19:03+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/main/</loc>
+    <loc>https://teresaesteban.github.io/prueba/main/</loc>
     <lastmod>2023-09-22T19:39:21+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://teresaesteban.github.io/prueba/categories/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://teresaesteban.github.io/prueba/tags/</loc>
   </url>
 </urlset>

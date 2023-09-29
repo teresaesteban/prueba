@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PRUEBA</title>
-    <link>https://example.org/</link>
+    <link>https://teresaesteban.github.io/prueba/</link>
     <description>Recent content on PRUEBA</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Sep 2023 20:20:16 +0200</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Sep 2023 20:20:16 +0200</lastBuildDate><atom:link href="https://teresaesteban.github.io/prueba/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Segundo_post</title>
-      <link>https://example.org/posts/segundo_post/</link>
+      <link>https://teresaesteban.github.io/prueba/posts/segundo_post/</link>
       <pubDate>Fri, 22 Sep 2023 20:20:16 +0200</pubDate>
       
-      <guid>https://example.org/posts/segundo_post/</guid>
+      <guid>https://teresaesteban.github.io/prueba/posts/segundo_post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Primer_post</title>
-      <link>https://example.org/posts/primer_post/</link>
+      <link>https://teresaesteban.github.io/prueba/posts/primer_post/</link>
       <pubDate>Fri, 22 Sep 2023 20:19:03 +0200</pubDate>
       
-      <guid>https://example.org/posts/primer_post/</guid>
+      <guid>https://teresaesteban.github.io/prueba/posts/primer_post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Main</title>
-      <link>https://example.org/main/</link>
+      <link>https://teresaesteban.github.io/prueba/main/</link>
       <pubDate>Fri, 22 Sep 2023 19:39:21 +0200</pubDate>
       
-      <guid>https://example.org/main/</guid>
+      <guid>https://teresaesteban.github.io/prueba/main/</guid>
       <description>TAREA MARKDOWN ##WIKIPEDIA
 Markdown es un lenguaje de marcado ligero creado por John Gruber y Aaron Swartz que trata de conseguir la máxima legibilidad y facilidad de publicación tanto en su forma de entrada como de salida, inspirándose en muchas convenciones existentes para marcar mensajes de correo electrónico usando texto plano.
 ###Historia
