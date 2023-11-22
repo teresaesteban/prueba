@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   // Paso 1: Crear un array y generar 10 números enteros aleatorios
+var numerosAleatorios = [];
+for (var i = 0; i < 10; i++) {
+  var numero = Math.floor(Math.random() * 101); // Genera números entre 0 y 100
+  numerosAleatorios.push(numero);
+}
+
+// Paso 2: Filtrar los números menores que 8 en un nuevo array utilizando if
+var menoresDe8 = [];
+for (var i = 0; i < numerosAleatorios.length; i++) {
+  if (numerosAleatorios[i] < 8) {
+    menoresDe8.push(numerosAleatorios[i]);
+  }
+}
+
+// Paso 3: Crear un nuevo array reemplazando los números impares con la palabra "impar" utilizando if
+var numerosConEtiquetas = [];
+for (var i = 0; i < numerosAleatorios.length; i++) {
+  if (numerosAleatorios[i] % 2 === 1) {
+    numerosConEtiquetas.push("impar");
+  } else {
+    numerosConEtiquetas.push(numerosAleatorios[i]);
+  }
+}
+
+// Mostrar los resultados
+document.write("Números aleatorios:", numerosAleatorios);
+document.write("Números menores de 8:", menoresDe8);
+document.write("Números con etiquetas:", numerosConEtiquetas);
+
+  </script>
+</body>
+</html>

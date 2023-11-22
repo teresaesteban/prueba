@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>ej3</title>
+</head>
+
+<body>
+
+<script>
+  function factorial(numero) {
+
+if (numero === 0 || numero === 1)
+  return 1;
+
+for (var i = numero - 1; i >= 1; i--) {
+  numero *= i;
+}
+
+return numero;
+}
+
+while(true) {
+
+var numero = prompt("Introduzca un número");
+
+if(numero === null) {
+  break;
+}
+
+numero = Number(numero);
+
+var esValido = !isNaN(numero);
+
+  if (!esValido) {
+    alert("Introduzca un número válido");
+  } else {
+    var resultado = factorial(numero);
+    alert(resultado);
+  }
+
+var resultado = factorial(numero);
+alert(resultado);
+
+}
+
+</script>
+
+</body>
+</html>

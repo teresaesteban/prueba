@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+var notas = {
+    nombre: "Juan Perez",
+    ingles: 9,
+    programacion: 7,
+    html: 8
+  };
+  function calcularMedia(notas) {
+    return (notas.ingles + notas.programacion + notas.html) / 3;
+}
+document.write("La media del alumno "+notas.nombre+" es "+calcularMedia(notas));
+      </script>
+</body>
+</html>

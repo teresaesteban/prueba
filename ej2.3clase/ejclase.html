@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manipulación de Array</title>
+</head>
+<body>
+    <h1>Manipulación de Array</h1>
+
+    <div>
+        <form name="formulario">
+            <label for="area">Introduce algunas palabras:</label>
+            <textarea name="area" rows="3" cols="40"></textarea>
+            <br>
+            <input type="button" value="Aceptar" onClick="processArray()">
+        </form>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        // Función para procesar el contenido del textarea
+        function processArray() {
+            var palabras = formulario.area.value.split(" "); // Separar el texto en palabras usando espacios como delimitador
+            var ventana;
+            ventana = window.open("", "", "width=400,height=300");
+
+            ventana.document.write("<br>primera palabra:<br>" + palabras[0]);
+            ventana.document.write("<br>última palabra:<br>" + palabras[palabras.length - 1]);
+            ventana.document.write("<br>Número de palabras:<br>" + palabras.length);
+            ventana.document.write("<br>Ordenadas alfabéticamente:<br>" + palabras.sort().join(", "));
+        }
+    </script>
+</body>
+</html>
+

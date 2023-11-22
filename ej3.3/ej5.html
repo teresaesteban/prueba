@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Vestido {
+      constructor() {
+        this.precio = 0;
+        this.descuento = 0;
+      }
+
+      ingresarDatos() {
+        this.precio = (prompt("Introduce el precio bruto del vestido:"));
+        this.descuento =(prompt("Introduce el porcentaje de descuento:"));
+      }
+
+      calcularNeto() {
+        return this.precio * (1 - this.descuento / 100);
+      }
+    }
+
+    // Crear una instancia de la clase Vestido
+    const vestido = new Vestido();
+
+    // Llamar al método para ingresar datos
+    vestido.ingresarDatos();
+
+    // Obtener el precio neto llamando al método correspondiente
+    const precioNeto = vestido.calcularNeto();
+
+    // Mostrar los resultados
+    document.write("<p>Precio bruto del vestido: " + vestido.precio + "€</p>");
+    document.write("<p>Descuento aplicado: " + vestido.descuento + "%</p>");
+    document.write("<p>Precio neto del vestido: " + precioNeto + "€</p>");
+  </script>
+</body>
+</html>
+

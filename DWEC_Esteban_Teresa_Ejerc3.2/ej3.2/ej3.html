@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ej3</title>
+</head>
+
+<body>
+
+<script>
+  // Definición de la función factorial
+  function factorial(numero) {
+    if (numero === 0 || numero === 1)
+      return 1;
+
+    for (var i = numero - 1; i >= 1; i--) {
+      numero *= i;
+    }
+
+    return numero;
+  }
+
+  // Bucle infinito para solicitar números hasta que se cancele la entrada
+  while (true) {
+    // Se solicita al usuario que introduzca un número
+    var numero = prompt("Introduzca un número");
+
+    // Se verifica si se ha cancelado la entrada de números
+    if (numero === null) {
+      break;
+    }
+
+    // Se convierte el valor ingresado a un número
+    numero = Number(numero);
+
+    // Se verifica si el valor ingresado es un número válido
+    var esValido = !isNaN(numero);
+
+    // Se muestra una alerta si el valor ingresado no es un número válido
+    if (!esValido) {
+      alert("Introduzca un número válido");
+    } else {
+      // Se calcula el factorial del número ingresado y se muestra el resultado
+      var resultado = factorial(numero);
+      alert(resultado);
+    }
+  }
+</script>
+
+</body>
+</html>

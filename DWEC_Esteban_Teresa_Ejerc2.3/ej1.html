@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Comienza un bucle para contar del 1 al 100.
+    for (var numero = 1; numero <= 100; numero++) {
+      // Comprueba si el número es divisible por 7 o si contiene un 7 en su representación decimal.
+      if(numero % 7 == 0 || numero % 10 === 7) {
+        // Si cumple una de las condiciones anteriores, muestra "PUM!" seguido de un salto de línea.
+        document.write("PUM!" + "<br>");
+      } else {
+        // Si no cumple con las condiciones, muestra el número seguido de una coma y un espacio.
+        document.write(numero + ",");
+      }
+    }
+  </script>
+</body>
+</html>

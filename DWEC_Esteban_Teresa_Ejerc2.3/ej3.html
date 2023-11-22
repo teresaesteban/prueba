@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de DNI</title>
+</head>
+<body>
+  <script>
+    // Solicita al usuario que ingrese el DNI completo.
+    var dniCompleto = prompt("Introduce el DNI completo (8 números seguidos de 1 letra):");
+
+    // Verifica que la entrada tenga 9 caracteres.
+    if (dniCompleto.length === 9) {
+      // Separa el número de DNI y la letra.
+      var numeroDNI = dniCompleto.substring(0, 8);
+      var letra = dniCompleto.charAt(8).toUpperCase(); // Convierte la letra a mayúscula si no lo está.
+
+      // Calcula el resto
+      var resto = numeroDNI % 23;
+      var letras = "TRWAGMYFPDXBNJZSQVHLCKET";
+      var letraCalculada = letras.charAt(resto);
+
+      // Comprueba si el número de DNI es válido.
+      if (!isNaN(numeroDNI)) {
+        // Comprueba si la letra ingresada coincide con la letra calculada.
+        if (letra === letraCalculada) {
+          document.write("El DNI " + numeroDNI + letra + " es válido.");
+        } else {
+          document.write("El DNI " + numeroDNI + " es incorrecto. La letra debería ser " + letraCalculada + ".");
+        }
+      } else {
+        document.write("El número de DNI no es válido.");
+      }
+    } else {
+      document.write("El DNI ingresado no tiene el formato correcto (8 números seguidos de 1 letra).");
+    }
+  </script>
+</body>
+</html>

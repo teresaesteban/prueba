@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej1</title>
+</head>
+
+<body>
+
+    <script>
+        function comprobarCaso() {
+            var texto = prompt('Ingresa un texto:');
+
+            if (!texto) {
+                return alert('Por favor ingresa texto');
+            }
+
+            var minusculas = false;
+            var mayusculas = false;
+
+            for (var i = 0; i < texto.length; i++) {
+                var letra = texto[i];
+                if (!minusculas && letra === letra.toLowerCase()) {
+                    minusculas = true;
+                }
+                if (!mayusculas && letra === letra.toUpperCase()) {
+                    mayusculas = true;
+                }
+            }
+
+            if (minusculas && mayusculas) {
+                alert('El texto contiene mayúsculas y minúsculas');
+            } else if (minusculas) {
+                alert('El texto está todo en minúsculas');
+            } else if (mayusculas) {
+                alert('El texto está todo en mayúsculas');
+            }
+
+        }
+
+        comprobarCaso();
+
+    </script>
+
+</body>
+</html>

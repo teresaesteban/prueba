@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej1</title>
+</head>
+
+<body>
+
+    <script>
+       //Definición de la función comprobarCaso()
+        function comprobarCaso() {
+            // Solicita al usuario que ingrese un texto
+            var texto = prompt('Ingresa un texto:');
+
+            // Verifica si el usuario ha ingresado un texto
+            if (!texto) {
+                // Muestra un mensaje si no se ingresó texto y sale de la función
+                return alert('Por favor ingresa texto');
+            }
+
+            // Inicialización de variables para comprobar minúsculas y mayúsculas
+            var minusculas = false;
+            var mayusculas = false;
+
+            // Bucle que recorre cada caracter del texto
+            for (var i = 0; i < texto.length; i++) {
+                var letra = texto[i];
+
+                // Verifica si el caracter actual es minúscula y si aún no se encontró ninguna minúscula
+                if (!minusculas && letra === letra.toLowerCase()) {
+                    minusculas = true;
+                }
+
+                // Verifica si el caracter actual es mayúscula y si aún no se encontró ninguna mayúscula
+                if (!mayusculas && letra === letra.toUpperCase()) {
+                    mayusculas = true;
+                }
+            }
+
+            // Muestra un mensaje dependiendo de si se encontraron minúsculas, mayúsculas o ambas en el texto
+            if (minusculas && mayusculas) {
+                alert('El texto contiene mayúsculas y minúsculas');
+            } else if (minusculas) {
+                alert('El texto está todo en minúsculas');
+            } else if (mayusculas) {
+                alert('El texto está todo en mayúsculas');
+            }
+        }
+
+        // Llamada a la función comprobarCaso() al cargar la página
+        comprobarCaso();
+
+    </script>
+
+</body>
+</html>

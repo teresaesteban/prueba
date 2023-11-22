@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div>
+    <h1>Comunicación entre ventanas</h1><br>
+    <form name="formulario">
+        <input type="text" name="url" size="50" value="https://www.leroymerlin.es/">
+        <input type="button" value="Mostrar URL en ventana secundaria" onclick="abrirVentanaSecundaria()">
+    </form>
+</div>
+
+<script>
+var ventanaSecundaria;
+
+function abrirVentanaSecundaria() {
+    var url = document.formulario.url.value;
+    ventanaSecundaria = window.open(url, "ventanaSec", "width=500, height=500");
+    ventanaSecundaria.focus();
+}
+</script>
+
+</body>
+</html>
+

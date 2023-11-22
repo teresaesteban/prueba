@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var vestido = {
+      precio: 0,
+      descuento: 0,  // Corregido aquí
+    };
+
+    vestido.precio = (prompt("Introduce el precio bruto del vestido:"));
+    vestido.descuento =(prompt("Introduce el porcentaje de descuento:"));
+
+    function neto() {
+      return vestido.precio * (1 - vestido.descuento / 100);
+    }
+
+    var precioNeto = neto();
+
+    document.write("<p>Precio bruto del vestido: " + vestido.precio + "€</p>");
+    document.write("<p>Descuento aplicado: " + vestido.descuento + "%</p>");
+    document.write("<p>Precio neto del vestido: " + neto() + "€</p>");
+  </script>
+</body>
+</html>

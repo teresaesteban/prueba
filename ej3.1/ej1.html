@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var numeros = [5, -2, 10, -8, 3];
+    var numerosNegativos = [];
+    for (let i = 0; i < numeros.length; i++) {
+  if (numeros[i] < 0) {
+    numerosNegativos.push(numeros[i]);
+  }
+}
+document.write("Números negativos:  ", numerosNegativos);
+var triples = [];
+for (let i = 0; i < numeros.length; i++) {
+  triples.push(numeros[i] * 3);
+}
+document.write("  Triple de los valores:  ", triples);
+
+// Paso 4: Calcular el resultado de multiplicar todos los valores del nuevo array
+var resultado = 1;
+for (var i = 0; i < triples.length; i++) {
+  resultado *= triples[i];
+}
+document.write("  Resultado de la multiplicación:  ", resultado);
+  </script>
+</body>
+</html>

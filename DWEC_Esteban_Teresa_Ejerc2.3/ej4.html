@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de DNI</title>
+</head>
+<body>
+  <script>
+       // Declaración de variables para almacenar dimensiones de la pantalla
+    var ancho = window.screen.availWidth;
+    var alto = window.screen.availHeight;
+
+    // Cálculo de la diagonal de la pantalla utilizando el teorema de Pitágoras
+    var diagonal = Math.sqrt(Math.pow(ancho, 2) + Math.pow(alto, 2)).toFixed(1);
+
+    // Cambio del color de fondo de la página
+    document.bgColor = 'gray';
+
+    // Cambio del color del texto en la página
+    document.fgColor = 'white';
+
+    // Cambio del título de la página
+    document.title = 'Varios objetos predefinidos de JS';
+
+    // Escribir el resultado en la página
+    document.write("La diagonal es: " + diagonal + " píxeles");
+  </script>
+</body>
+</html>

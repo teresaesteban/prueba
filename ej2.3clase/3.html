@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invocar función desde JavaScript</title>
+  <script>
+    function mi_funcion() {
+      // Instrucciones a realizar en la función.
+      alert("La función se ha invocado con el argumento: " );
+    }
+    function mi_funcion2() {
+      // Instrucciones a realizar en la función.
+      alert("La función se ha invocado con el argumento2: " );
+    }
+  </script>
+</head>
+<body onload="mi_funcion('al cargar la página')">
+  <input type="button" value="Pulsa aquí" onclick="mi_funcion2('al hacer clic en el botón')">
+</body>
+</html>

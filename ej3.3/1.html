@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+class Coche {
+  constructor(marca_in, modelo_in, anyo_in) {
+    this.marca = marca_in;
+    this.modelo = modelo_in;
+    this.anyo = anyo_in;
+  }
+  imprimeDatos() {
+    console.log(`Marca: ${this.marca}, Modelo: ${this.modelo}, Año: ${this.anyo}`);
+  }}
+// Crear una instancia de la clase Coche
+var mi_coche = new Coche("Peugeot", "206cc", "2003");
+
+// Llamada al método imprimeDatos
+mi_coche.imprimeDatos();
+
+// Agregar una nueva propiedad a la instancia
+mi_coche.color = "azul";
+
+// Imprimir la nueva propiedad
+console.log("Color: " + mi_coche.color);
+      </script>
+</body>
+</html>

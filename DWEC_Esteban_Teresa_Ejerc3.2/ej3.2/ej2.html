@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ej2</title>
+</head>
+
+<body>
+  <script>
+    // Inicialización de un array de números
+    var numeros = [5, -2, 10, -8, 3];
+
+    // Inicialización de un array para almacenar números negativos
+    var numerosNegativos = [];
+
+    // Bucle que recorre el array original para identificar y almacenar números negativos
+    for (let i = 0; i < numeros.length; i++) {
+      if (numeros[i] < 0) {
+        numerosNegativos.push(numeros[i]);
+      }
+    }
+
+    // Mostrar en el documento los números negativos
+    document.write("Números negativos:  ", numerosNegativos);
+
+    // Inicialización de un nuevo array para almacenar el triple de cada valor
+    var triples = [];
+
+    // Bucle que recorre el array original y multiplica cada valor por 3, almacenando los resultados en el nuevo array
+    for (let i = 0; i < numeros.length; i++) {
+      triples.push(numeros[i] * 3);
+    }
+
+    // Mostrar en el documento los triples de los valores originales
+    document.write("  Triple de los valores:  ", triples);
+
+    // Inicialización de una variable para calcular el resultado de la multiplicación de todos los valores en el nuevo array
+    var resultado = 1;
+
+    // Bucle que recorre el array de triples y multiplica cada valor para obtener un resultado acumulado
+    for (var i = 0; i < triples.length; i++) {
+      resultado *= triples[i];
+    }
+
+    // Mostrar en el documento el resultado de la multiplicación
+    document.write("  Resultado de la multiplicación:  ", resultado);
+  </script>
+</body>
+
+</html>

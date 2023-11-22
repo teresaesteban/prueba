@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Obtiene el día de la semana (0 para Domingo, 1 para Lunes, etc.).
+    var dia = new Date().getDay();
+    var nombreDia; // Variable para almacenar el nombre del día.
+    var fecha = new Date().getDate(); // Obtiene el día del mes.
+    var mes = new Date().getMonth(); // Obtiene el mes (0 para Enero, 1 para Febrero, etc.).
+    var anoa = new Date().getUTCFullYear(); // Obtiene el año.
+    var hora = new Date().getHours(); // Obtiene la hora.
+    var min = new Date().getMinutes(); // Obtiene los minutos.
+
+    // Verifica si los minutos son menores que 10 y agrega un cero inicial si es necesario.
+    var minutosFormateados = (min < 10) ? "0" + min : min;
+
+    var nombremes; // Variable para almacenar el nombre del mes.
+
+    // Utiliza un switch para asignar el nombre del día basado en el número obtenido.
+    switch (dia) {
+      case 0:
+        nombreDia = "Domingo";
+        break;
+      case 1:
+        nombreDia = "Lunes";
+        break;
+      case 2:
+        nombreDia = "Martes";
+        break;
+      // ... (continúa para el resto de los días de la semana)
+      default:
+        nombreDia = "Día no válido";
+    }
+
+    // Utiliza otro switch para asignar el nombre del mes basado en el número obtenido.
+    switch (mes) {
+      case 0:
+        nombremes = "Enero";
+        break;
+      case 1:
+        nombremes = "Febrero";
+        break;
+      // ... (continúa para el resto de los meses)
+      default:
+        nombremes = "Mes no válido";
+    }
+
+    // Muestra en el documento la fecha y hora formateadas.
+    document.write("Hoy es " + nombreDia + "," + fecha + " de " + nombremes + " de " + anoa + " y son las " + hora + ":" + minutosFormateados);
+  </script>
+</body>
+</html>
