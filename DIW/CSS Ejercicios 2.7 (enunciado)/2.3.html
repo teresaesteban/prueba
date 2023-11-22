@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Básico</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* 6 columnas de igual ancho */
+        grid-template-rows: repeat(8, 1fr);    /* 8 filas de igual alto */
+        gap: 1px;  /* Espacio entre las celdas */
+        height: 400px; /* Establece una altura para el grid (ajusta según tus necesidades) */
+      }
+
+      /* Estilos para las celdas (puedes personalizarlos como desees) */
+      .grid-item {
+        background-color: #ffffff;
+        border: 1px solid #000;
+      }
+      .dewes{
+        grid-row: 2 /span 3;
+        grid-column: 2;
+        background-color: aqua;
+        border: 1px solid #000;
+      }
+      .dewes1{
+        grid-row: 2 /span 3;
+        grid-column: 3;
+        background-color: aqua;
+        border: 1px solid #000;
+      }
+      .dewes2{
+        grid-row: 2 /span 3;
+        grid-column: 4;
+        background-color: aqua;
+        border: 1px solid #000;
+      }
+      .recreo{
+        grid-column: 2 /span 5;
+        grid-row: 5;
+        background-color: antiquewhite;
+        border: 1px solid #000;
+      }
+      .grid-item.EIE{
+        background-color: rgb(196, 196, 196);
+      }
+      .DAW{
+        grid-row: 7 /span 2;
+        grid-column: 2;
+        background-color: pink;
+        border: 1px solid #000;
+      }
+      .dewec{ grid-row: 2 /span 2;
+        grid-column: 5;
+        background-color: rgb(255, 113, 137);
+        border: 1px solid #000;
+
+      }
+      .eie2{ grid-row: 2 /span 2;
+        grid-column: 6;
+        background-color: rgb(196, 196, 196);
+        border: 1px solid #000;
+
+      }
+      .grid-item.DAW2{
+        background-color: pink;
+      }
+      .grid-item.ing{
+        background-color: forestgreen;
+      }
+      .DIW{
+        grid-row: 6 /span 3;
+        grid-column: 3;
+        background-color: rgb(255, 245, 192);
+        border: 1px solid #000;
+      }
+      .grid-item.diw2{
+        background-color: rgb(255, 245, 192);
+      }
+      .dewec2{
+        grid-row: 7 /span 2;
+        grid-column: 4;
+        background-color: rgb(255, 113, 137);
+        border: 1px solid #000;
+
+      }
+      .DIW3{
+        grid-row: 7 /span 2;
+        grid-column: 5;
+        background-color: rgb(255, 245, 192);
+        border: 1px solid #000;
+      }
+      .dewec3{
+        grid-row: 7 /span 2;
+        grid-column: 6;
+        background-color: rgb(255, 113, 137);
+        border: 1px solid #000;}
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Celdas en el grid -->
+      <div class="grid-item">Horas</div>
+      <div class="grid-item">Lunes</div>
+      <div class="grid-item">Martes</div>
+      <div class="grid-item">Miercoles</div>
+      <div class="grid-item">Jueves</div>
+      <div class="grid-item">Viernes</div>
+      <div class="grid-item">1</div>
+      <div class="dewes">DEWES</div>
+      <div class="dewes1">DEWES</div>
+      <div class="dewes2">DEWES</div>
+      <div class="dewec">DWEC</div>
+      <div class="eie2">EIE</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item DAW2">DAW</div>
+      <div class="grid-item ing">ING</div>
+      <div class="grid-item">-</div>
+      <div class="recreo">Recreo</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item EIE">EIE</div>
+      <div class="DIW">DIW</div>
+      <div class="grid-item diw2">DIW</div>
+      <div class="dewec2">DEWEC</div>
+      <div class="grid-item DAW2">DAW</div>
+      <div class="DIW3">DIW</div>
+      <div class="DAW">DAW</div>
+
+      <div class="grid-item ing">ING</div>
+      <div class="dewec3">DWEC</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+
+
+    </div>
+  </body>
+  </html>
+
+

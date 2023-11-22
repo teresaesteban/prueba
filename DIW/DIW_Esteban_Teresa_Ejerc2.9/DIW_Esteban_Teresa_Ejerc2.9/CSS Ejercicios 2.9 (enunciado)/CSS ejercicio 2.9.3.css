@@ -1,0 +1,141 @@
+/* === IMPORTANTE ===================================================
+   No modificar estos estilos, ya que son imprescindibles para
+   que la página se vea correctamente.
+   ================================================================== */
+
+/*-- Básico ----------------------------------------------------------*/
+ul, ul li { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, p, form { margin: 0; padding: 0; }
+.clear { clear: both; }
+img { border: none; }
+
+/*-- Layout ----------------------------------------------------------*/
+#contenedor {
+  width: 90%;
+  max-width: 900px;
+  width: expression(document.body.clientWidth > 901? "900px": "auto"); /* Es una expresión JavaScript que asigna un valor a un atributo CSS. */
+  margin: 0 auto;
+}
+
+#cabecera, #menu, #lateral, #contenido, #contenido #principal, #contenido #secundario, #pie {
+  border: 2px solid #777;
+}
+
+#cabecera { clear: both; }
+#menu { clear: both; }
+#lateral { float: left; width: 20%; }
+#contenido { float: right; width: 78%; }
+#contenido #principal { float: left; width: 78%; }
+#contenido #secundario { float: right; width: 20%; }
+#pie { clear: both; }
+
+/*-- Cabecera --------------------------------------------------------*/
+#cabecera #logo { float: left; }
+#cabecera #buscador { float: right; }
+
+/*-- Menu ------------------------------------------------------------*/
+#menu ul#menu_principal li { display: inline; float: left; }
+
+/*-- Sección Principal -----------------------------------------------*/
+#contenido #principal .articulo img { width: 100px; float: left; }
+
+/*-- Pie de página ---------------------------------------------------*/
+#pie .enlaces   { float: left; }
+#pie .copyright { float: right; }
+
+/* === IMPORTANTE ===================================================
+   A partir de aquí, se pueden añadir todos los estilos propios que
+   sean necesarios.
+   ================================================================== */
+
+   /* Modificaciones del ejercicio 2 */
+ #cabecera, #menu, #lateral, #contenido, #contenido #principal, #contenido #secundario, #pie {
+  border: none;/*2.a)Elimina el borde gris que muestran por defecto todos los elementos.*/
+}
+
+#menu {
+  border-bottom: 1px solid #004C99; /* 2.b) Borde inferior azul */
+}
+
+#noticias, #pie {
+  background-color: #F8F8F8; /* 3.a) Fondo gris claro */
+  border: 1px solid #C5C5C5;/*2.c)El elemento #noticias muestra un borde de 1 píxel y color gris claro #C5C5C5.*/
+}
+
+#publicidad {
+  border: 1px dashed #CC6600; /* 2.d) Borde discontinuo naranja */
+  background-color: #FFF6CD; /* 3.b) Fondo amarillo claro */
+}
+
+#contenido #secundario {
+  border: 1px solid #CC6600;/* 2e) El lateral formado por el elemento #secundario muestra un borde de 1 píxel y de color #CC6600. */
+}
+#secundario h2 {
+  background-color: #DB905C; /* 3.c) Fondo naranja */
+  padding: 0.2em;
+}
+
+#menu {
+  background: url('imagenes/fondo_menu.gif') repeat; /* 3.d) Fondo desde imagen */
+}
+
+#cabecera h1 {
+  background: url('imagenes/logo.gif') no-repeat; /* 3.e) Logotipo como imagen de fondo */
+}
+#cabecera,
+  #menu,
+  #lateral,
+  #lateral #noticias,
+  #lateral #publicidad,
+  #contenido,
+  #contenido #principal,
+  #contenido #secundario,
+  #pie {
+    padding: .5em;
+  }
+
+  #lateral {
+    padding: 0;
+  }
+
+/* 1 */
+/* 1.a) El elemento #cabecera debe tener un relleno de 1em en todos los lados. */
+#cabecera {
+  padding: 1em;
+}
+
+/* 1.b) El elemento #menu debe tener un relleno de 0.5em en todos los lados y un margen inferior de 0.5em. */
+#menu {
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Resto de modificaciones del ejercicio 1 */
+#contenido {
+  width: 77%;
+  padding: 0;
+}
+
+#contenido #principal {
+  width: 73%;
+}
+
+#pie {
+  padding: 0.5em 0; /* 1.c) Relleno en zona superior e inferior */
+  margin-top: 1em; /* 1.g) Margen superior */
+  border-top: 1px solid #C5C5C5; /* Borde superior gris claro *//* 2f) El elemento #pie debe mostrar un borde superior y otro inferior de 1 píxel y color gris claro #C5C5C5. */
+  border-bottom: 1px solid #C5C5C5; /* Borde inferior gris claro */
+
+}
+
+#contenido #principal .articulo {
+  margin-bottom: 1em; /* 1.d) Separación entre artículos */
+}
+
+#contenido #principal .articulo img {
+  margin: 0.5em; /* 1.e) Margen en imágenes de artículos */
+}
+
+#lateral #publicidad {
+  margin-top: 1em; /* 1.f) Separación de 1em desde el elemento superior */
+}

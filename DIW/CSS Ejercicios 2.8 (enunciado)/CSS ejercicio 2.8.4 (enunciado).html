@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 2.8.4</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            color: white;
+        }
+
+        #verde:checked ~ table tr.verde:hover {
+            background-color: green;
+        }
+        #azul:checked ~ table tr.azul:hover {
+            background-color: blue;
+        }
+        #naranja:checked ~ table tr.naranja:hover {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <label for="verde">Verde</label>
+    <input type="radio" id="verde" name="color" checked />
+    <label for="azul">Azul</label>
+    <input type="radio" id="azul" name="color" />
+    <label for="naranja">Naranja</label>
+    <input type="radio" id="naranja" name="color" />
+    <br /><br />
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Points</th>
+        </tr>
+        <tr class="verde">
+            <td>Peter</td>
+            <td>Griffin</td>
+            <td>$100</td>
+        </tr>
+        <tr class="azul">
+            <td>Lois</td>
+            <td>Griffin</td>
+            <td>$150</td>
+        </tr>
+        <tr class="naranja">
+            <td>Joe</td>
+            <td>Swanson</td>
+            <td>$300</td>
+        </tr>
+        <tr class="verde">
+            <td>Cleveland</td>
+            <td>Brown</td>
+            <td>$250</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 2.9.4</title>
+    <style>
+        div {
+            background-color: rgb(186, 186, 186); /* Color de fondo gris para el div */
+            text-align: center; /* Centra el texto en el div */
+            padding: 5px; /* Añade espacio alrededor del texto dentro del div */
+        }
+
+        .anterior {
+            float: left; /* Mueve "Anterior" a la izquierda */
+        }
+
+        .siguiente {
+            float: right; /* Mueve "Siguiente" a la derecha */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="anterior">&laquo; Anterior</div>
+        <div class="siguiente">Siguiente &raquo;</div>
+        <div style="clear: both;"></div> <!-- Limpia el float para que el div principal se expanda correctamente -->
+    </div>
+</body>
+</html>

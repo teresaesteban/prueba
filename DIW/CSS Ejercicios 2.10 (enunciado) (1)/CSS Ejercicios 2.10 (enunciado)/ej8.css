@@ -1,0 +1,34 @@
+/* Estilos para las filas */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para los elementos .ball */
+.ball {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+}
+
+.ball1 {
+    background-image: url("images/bola7.jpeg");
+}
+
+.ball2 {
+    background-image: url("images/bola8.jpeg");
+}
+
+.ball3 {
+    background-image: url("images/bola9.jpeg");
+}
+
+.ball4 {
+    background-image: url("images/bola10.jpeg");
+}
+
+.ball5 {
+    background-image: url("images/bola13.jpeg");
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        i + b {
+            color: red;
+        }
+
+        p~i {
+          color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p><i>Texto en cursiva</i> <b>Texto en negrita (hermano inmediato)</b></p>
+    <p><i>Texto en cursiva</i> <b>Texto en negrita con subrayado (hermano no inmediato)</b></p>
+    <p>No afecta a este <b>Texto en negrita</b>.</p>
+</body>
+</html>

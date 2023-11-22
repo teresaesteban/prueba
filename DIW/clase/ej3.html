@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Formulario de Contacto</h1>
+  <embed src="https://img2.rtve.es/v/5569689?w=1600&preview=1588621482393.jpg" width="4000" height="300" autoplay="false" controls></embed>
+  <object data="../DIW/gatos.jpg" width="400" height="300">
+  </object>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+  <form action="procesar.php" method="post" target="hidden_iframe">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="mensaje">Mensaje:</label><br>
+      <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+
+      <input type="submit" value="Enviar">
+  </form>
+
+</body>
+</html>

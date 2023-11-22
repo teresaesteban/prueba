@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo para elementos con la clase "roja" */
+        [class=roja] {
+            color: red;
+        }
+
+        /* Estilo para elementos h1 que NO tienen la clase "verde" */
+        h1:not([class=verde]) {
+            color: blue; /* Cambié el color a azul para mayor contraste */
+        }
+
+        /* Estilos utilizando atributos para clases que comienzan, terminan o contienen ciertos valores */
+        [class^=ro] {
+            color: green; /* Cambié el color a verde para mayor contraste */
+        }
+
+        [class$=ja] {
+            font-weight: bold;
+        }
+
+        [class*=oj] {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="roja">Un encabezado rojo con la clase "roja"</h1>
+    <h1 class="verde">Un encabezado verde con la clase "verde"</h1>
+    <h1 class="inicio-ro medio-aj final-ja cont-ain-oj">Un encabezado con clases de ejemplo</h1>
+</body>
+</html>

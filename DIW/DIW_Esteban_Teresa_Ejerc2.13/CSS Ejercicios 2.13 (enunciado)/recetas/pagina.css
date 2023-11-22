@@ -1,0 +1,175 @@
+/* Estilos globales */
+* {
+    margin: 0 auto; /* Establece el margen de todos los elementos a 0 y los centra horizontalmente. */
+}
+
+/* Cabecera */
+.cabecera {
+    background-image: url("cabecera.jpg"); /* Establece una imagen de fondo para la cabecera. */
+    height: 350px; /* Altura de la cabecera. */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo. */
+    background-position: center; /* Centra la imagen de fondo. */
+    width: 100%; /* Ancho completo. */
+}
+
+/* Logo */
+.logo {
+    float: left; /* Hace que el logo flote a la izquierda. */
+}
+
+/* Contenedor principal */
+.contenedor {
+    background-color: #3f2701; /* Color de fondo del contenedor principal. */
+    height: 100px; /* Altura del contenedor principal. */
+    text-align: center; /* Texto centrado en el contenedor. */
+    font-size: medium; /* Tamaño de fuente medio. */
+    width: 995px; /* Ancho del contenedor principal. */
+}
+
+/* Título */
+.titulo {
+    color: white; /* Color del texto del título. */
+    margin-top: 3px; /* Margen superior del título. */
+    padding-top: 25px; /* Relleno superior del título. */
+}
+
+/* Menú principal */
+.menu {
+    background-color: black; /* Color de fondo del menú principal. */
+    width: 995px; /* Ancho del menú principal. */
+    height: 50px; /* Altura del menú principal. */
+}
+
+/* Lista no ordenada (ul) */
+ul {
+    margin: 0px; /* Restablece el margen de las listas no ordenadas. */
+}
+
+/* Elemento desplegable del menú */
+.desplegable {
+    background-color: #3d8e41; /* Color de fondo del elemento desplegable del menú. */
+    height: 50px; /* Altura del elemento desplegable del menú. */
+    width: 70px; /* Ancho del elemento desplegable del menú. */
+    float: inline-start; /* Hace que el elemento flote al inicio en línea. */
+    text-align: center; /* Texto centrado en el elemento desplegable. */
+}
+
+.desplegable a {
+    color: white; /* Color del texto del enlace dentro del elemento desplegable. */
+    text-decoration: none; /* Sin decoración de texto en el enlace. */
+}
+
+.desplegable .submenu {
+    display: none; /* Inicialmente oculta el submenu. */
+    background-color: rgb(235, 223, 223); /* Color de fondo del submenu. */
+    margin: 0; /* Sin margen en el submenu. */
+    padding: 0; /* Sin relleno en el submenu. */
+}
+
+.desplegable:hover .submenu {
+    display: block; /* Muestra el submenu cuando se pasa el ratón por encima del elemento desplegable. */
+    width: 150px; /* Ancho del submenu. */
+}
+
+.desplegable .submenu li {
+    display: block; /* Muestra los elementos de lista del submenu como bloques. */
+    text-align: center; /* Texto centrado en los elementos de lista del submenu. */
+}
+
+.desplegable .submenu li a {
+    color: black; /* Color del texto de los enlaces en el submenu. */
+    display: block; /* Muestra los enlaces como bloques. */
+    padding: 10px; /* Relleno de los enlaces en el submenu. */
+    text-decoration: none; /* Sin decoración de texto en los enlaces del submenu. */
+}
+
+.desplegable .submenu li a:hover {
+    background-color: #bdb7ad; /* Cambia el color de fondo al pasar el ratón por encima de los enlaces en el submenu. */
+}
+
+main {
+    background-color: #dcc8c4; /* Color de fondo del área principal. */
+    width: 995px; /* Ancho del área principal. */
+    margin: 0 auto; /* Centra el área principal en la página. */
+    overflow: hidden; /* Oculta el desbordamiento del contenido. */
+}
+
+.recipe {
+    margin: 20px 197px 20px 197px; /* Márgenes del bloque de receta. */
+    padding: 20px; /* Relleno del bloque de receta. */
+    background-color: #fff; /* Color de fondo del bloque de receta. */
+    border: 1px solid #1d1b1b; /* Borde del bloque de receta. */
+    border-radius: 5px; /* Radio de borde del bloque de receta. */
+    width: 600px; /* Ancho del bloque de receta. */
+}
+
+.recipe img {
+    float: right; /* Hace que la imagen de la receta flote a la derecha del texto. */
+    margin-top: -10px; /* Desplazamiento hacia arriba de la imagen. */
+    margin-right: -10px; /* Desplazamiento hacia la izquierda de la imagen. */
+    border: 3px solid #171717; /* Borde de la imagen de la receta. */
+    border-radius: 5px; /* Radio de borde de la imagen de la receta. */
+    margin-bottom: 100px; /* Márgenes inferiores de la imagen de la receta. */
+    width: 100px; /* Ancho de la imagen de la receta. */
+}
+
+.recipe:target {
+    border: 2px solid red; /* Estilo del bloque de receta cuando es el objetivo. */
+    border-radius: 10px; /* Radio de borde del bloque de receta cuando es el objetivo. */
+}
+
+.english {
+    display: none; /* Inicialmente oculta el contenido con la clase 'english'. */
+}
+
+#lenguaje1:checked~.english,
+#lenguaje2:checked~.english,
+#lenguaje3:checked~.english,
+#lenguaje4:checked~.english,
+#lenguaje5:checked~.english,
+#lenguaje6:checked~.english {
+    display: block; /* Muestra el contenido con la clase 'english' cuando se selecciona el idioma correspondiente. */
+}
+
+#lenguaje1:checked~.spanish,
+#lenguaje2:checked~.spanish,
+#lenguaje3:checked~.spanish,
+#lenguaje4:checked~.spanish,
+#lenguaje5:checked~.spanish,
+#lenguaje6:checked~.spanish {
+    display: none; /* Oculta el contenido con la clase 'spanish' cuando se selecciona el idioma correspondiente. */
+}
+
+#columnas1:checked~.uno,
+#columnas2:checked~.uno,
+#columnas3:checked~.uno,
+#columnas4:checked~.uno,
+#columnas5:checked~.uno,
+#columnas6:checked~.uno,
+#columnas1:checked~.dos,
+#columnas2:checked~.dos,
+#columnas3:checked~.dos,
+#columnas4:checked~.dos,
+#columnas5:checked~.dos,
+#columnas6:checked~.dos {
+    column-width: 50%; /* Ancho de columna del 50%. */
+    column-count: 2; /* Número de columnas del 2. */
+}
+
+.pie {
+    background-color: black; /* Color de fondo del pie de página. */
+    width: 995px; /* Ancho del pie de página. */
+    color: white; /* Color del texto del pie de página. */
+    display: flex; /* Usa el modelo de caja flexible. */
+    flex-direction: row; /* Establece la dirección de los elementos flexibles en fila. */
+}
+
+.derecha {
+    text-align: start; /* Alinea el texto a la izquierda. */
+    margin: 1px; /* Márgenes del lado derecho. */
+}
+
+.izquierda {
+    text-align: end; /* Alinea el texto a la derecha. */
+    margin-right: 1px; /* Márgenes del lado izquierdo. */
+}

@@ -1,0 +1,18 @@
+
+/* Colocar el segundo párrafo en negrita */
+p:nth-of-type(2) {
+    font-weight: bold;
+  }
+
+  /* Estilizar enlaces con iconos */
+  a[href$=".pdf"] {
+    padding-right: 20px; /* Añade espacio a la derecha para la imagen de fondo */
+  background-image: url("3829386.png") no-repeat;
+  background-position: left; /* Alinea la imagen de fondo a la derecha y al centro */
+  }
+
+  /* Resaltar el texto "lista de enlaces" */
+  .resaltar {
+    background-color: yellow;
+    font-size: 110%;
+  }
