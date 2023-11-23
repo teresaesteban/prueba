@@ -4,11 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script>
+    function mayorQueN1(num1, num2) {
+      return num1 > num2;
+    }
+    function N2Positivo(num2) {
+      return num2 > 0;
+    }
+    function N1NegativoONoCero(num1) {
+      return num1 < 0 || num1 !== 0;
+    }
+
+    function sumaUnoMayorIgualN2(num1, num2) {
+      return num1 + 1 >= num2;
+    }
+  </script>
 </head>
 <body>
   <script>
-var num1=(prompt("Escribe un número",""))
-var num2=(prompt("Escribe otro número",""))
+    var num1;
+    var num2;
+
+    do {
+      num1 = parseInt(prompt("Escribe un número", ""));
+      num2 = parseInt(prompt("Escribe otro número", ""));
+    } while (num1 === null || num2 === null || isNaN(num1) || isNaN(num2));
+
+    alert("El primer número es mayor que el segundo: " + mayorQueN1(num1, num2));
+    alert("El segundo número es positivo: " + N2Positivo(num2));
+    alert("El primer número es negativo o distinto de cero: " + N1NegativoONoCero(num1));
+    alert("Al sumar 1 al primer número, se convierte en mayor o igual que el segundo: " + sumaUnoMayorIgualN2(num1, num2));
   </script>
 </body>
 </html>
