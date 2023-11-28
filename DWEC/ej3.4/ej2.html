@@ -13,7 +13,7 @@
       var dni = prompt("Introduce tu número de DNI (sin letra):");
 
       // Validar que el DNI sea un número válido
-      if (!isNaN(dni) && dni !== null && dni !== "") {
+      if (!isNaN(dni) && dni !== null && dni !== ""&&dni.length == 8 ) {
         // Calcular la letra del DNI
         var resto = dni % 23;
         var letraCalculada = letrasDNI[resto];
@@ -26,10 +26,9 @@
         validarDNI();
       }
     }
+    validarDNI();
   </script>
 </head>
 <body>
-  <h1>Validación de DNI</h1>
-  <button onclick="validarDNI()">Validar DNI</button>
 </body>
 </html>
