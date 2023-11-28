@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+function validateDNI(dni) {
+
+  var letters = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+
+  var number = 0;
+  var pow = 1;
+
+  for(var i = 0; i < dni.length-1; i++) {
+    number += (dni[i] - '0') * pow;
+    pow *= 10;
+  }
+
+  var letter = dni[8];
+
+  var result = number % 23;
+
+  if(letters[result] === letter) {
+    alert("El DNI " + dni + " es correcto");
+    return true;
+  } else {
+    alert("El DNI " + dni + " no es correcto");
+    return false;
+  }
+
+}
+
+var dni;
+
+do {
+  dni = prompt("Introduce tu DNI (8 números + letra): ");
+} while(!validateDNI(dni));
+
+
+</script>
+
+</body>
+</html>

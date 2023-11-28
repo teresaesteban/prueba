@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function ProductosAlimenticios(codigo, nombre, precio) {
+  this.codigo = codigo;
+  this.nombre = nombre;
+  this.precio = precio;
+
+  this.imprimeDatos = function() {
+    console.log(`Código: ${this.codigo}`);
+    console.log(`Nombre: ${this.nombre}`);
+    console.log(`Precio: ${this.precio}`);
+  }
+}
+
+const producto1 = new ProductosAlimenticios(1, 'Arroz', 500);
+const producto2 = new ProductosAlimenticios(2, 'Frijoles', 400);
+const producto3 = new ProductosAlimenticios(3, 'Azúcar', 100);
+
+const productos = [producto1, producto2, producto3];
+
+for (let i = 0; i < productos.length; i++) {
+  productos[i].imprimeDatos();
+  console.log('');
+}
+  </script>
+</body>
+</html>
