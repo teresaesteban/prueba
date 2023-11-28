@@ -7,28 +7,34 @@
 </head>
 <body>
   <script>
+    // Definición de una función constructora llamada ProductosAlimenticios
     function ProductosAlimenticios(codigo, nombre, precio) {
-  this.codigo = codigo;
-  this.nombre = nombre;
-  this.precio = precio;
+      // Propiedades del objeto creado por la función constructora
+      this.codigo = codigo;
+      this.nombre = nombre;
+      this.precio = precio;
 
-  this.imprimeDatos = function() {
-    console.log(`Código: ${this.codigo}`);
-    console.log(`Nombre: ${this.nombre}`);
-    console.log(`Precio: ${this.precio}`);
-  }
-}
+      // Método que imprime los datos del producto en la consola
+      this.imprimeDatos = function() {
+        console.log(`Código: ${this.codigo}`);
+        console.log(`Nombre: ${this.nombre}`);
+        console.log(`Precio: ${this.precio}`);
+      }
+    }
 
-const producto1 = new ProductosAlimenticios(1, 'Arroz', 500);
-const producto2 = new ProductosAlimenticios(2, 'Frijoles', 400);
-const producto3 = new ProductosAlimenticios(3, 'Azúcar', 100);
+    // Creación de instancias de ProductosAlimenticios
+    const producto1 = new ProductosAlimenticios(1, 'Arroz', 500);
+    const producto2 = new ProductosAlimenticios(2, 'Frijoles', 400);
+    const producto3 = new ProductosAlimenticios(3, 'Azúcar', 100);
 
-const productos = [producto1, producto2, producto3];
+    // Creación de un array que contiene los productos creados
+    const productos = [producto1, producto2, producto3];
 
-for (var i = 0; i < productos.length; i++) {
-  productos[i].imprimeDatos();
-  console.log('');
-}
+    // Bucle for para recorrer el array de productos e imprimir sus datos
+    for (var i = 0; i < productos.length; i++) {
+      productos[i].imprimeDatos(); // Llamada al método imprimeDatos de cada producto
+      console.log(''); // Imprime una línea en blanco entre cada producto
+    }
   </script>
 </body>
 </html>

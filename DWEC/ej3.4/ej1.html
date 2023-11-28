@@ -4,17 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
   <script>
+    // Función que devuelve true si num1 es mayor que num2
     function mayorQueN1(num1, num2) {
       return num1 > num2;
     }
+
+    // Función que devuelve true si num2 es positivo
     function N2Positivo(num2) {
       return num2 > 0;
     }
+
+    // Función que devuelve true si num1 es negativo o no es cero
     function N1NegativoONoCero(num1) {
       return num1 < 0 || num1 !== 0;
     }
 
+    // Función que devuelve true si al sumar 1 a num1, este se vuelve mayor o igual que num2
     function sumaUnoMayorIgualN2(num1, num2) {
       return num1 + 1 >= num2;
     }
@@ -22,14 +29,17 @@
 </head>
 <body>
   <script>
+    // Declaración de variables num1 y num2
     var num1;
     var num2;
 
+    // Solicitar al usuario que ingrese dos números y repetir hasta que se ingresen valores válidos
     do {
       num1 = parseInt(prompt("Escribe un número", ""));
       num2 = parseInt(prompt("Escribe otro número", ""));
     } while (num1 === null || num2 === null || isNaN(num1) || isNaN(num2));
 
+    // Mostrar alertas con resultados de las funciones en base a los números ingresados
     alert("El primer número es mayor que el segundo: " + mayorQueN1(num1, num2));
     alert("El segundo número es positivo: " + N2Positivo(num2));
     alert("El primer número es negativo o distinto de cero: " + N1NegativoONoCero(num1));
