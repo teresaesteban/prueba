@@ -5,30 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Validación de DNI</title>
   <script>
-    function validarDNI() {
-      // Array de letras
-      var letrasDNI = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+ function validarDNI() {
 
-      // Pedir DNI
-      var dni = prompt("Introduce tu número de DNI (QUE NO TENGA LETRA):");
+var letrasDNI = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
 
-      // Validar que el DNI
-      if (!isNaN(dni) && dni !== null && dni !== ""&&dni.length == 8 ) {
-        // Calcular la letra
-        var resto = dni % 23;
-        var letra = letrasDNI[resto];
+var dni = prompt("Introduce tu número de DNI:");
 
-        // Mostrar mensaje con la letra
-        alert("Tu DNI completo es: " + dni + letra);
-      } else {
-        // Mostrar mensaje de error y volver a solicitar el DNI
-        alert("Por favor, introduce un número de DNI válido.");
-        validarDNI();
-      }
+// Separar el número y la letra
+var numero = '';
+var letra = '';
+for(var i = 0; i < dni.length; i++) {
+  if(i == 8) {
+    letra = dni[i];
+  } else {
+    numero += dni[i];
+  }
+}
+
+if(!isNaN(numero)) {
+  numero = Number(numero); // Convertir a número
+
+  // Validar longitud
+  if(numero >= Math.pow(10, 7) && numero < Math.pow(10, 8)) {
+
+    // Calcular letra
+    var resto = numero % 23;
+
+    // Comparar letras
+    if(letrasDNI[resto] === letra) {
+      alert("Tu DNI completo es: " + dni);
+    } else {
+      alert("Letra del DNI incorrecta");
     }
-    validarDNI();
+
+  } else {
+    alert("El DNI debe tener 8 números");
+  }
+
+} else {
+  alert("El DNI debe contener solo números");
+}
+
+}
+
+validarDNI();
   </script>
 </head>
 <body>
 </body>
 </html>
+
