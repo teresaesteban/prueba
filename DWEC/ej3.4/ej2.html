@@ -1,47 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Validación de DNI</title>
+  <script>
+    function validarDNI() {
+      // Array de letras para el cálculo
+      var letrasDNI = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+
+      // Solicitar DNI al usuario
+      var dni = prompt("Introduce tu número de DNI (sin letra):");
+
+      // Validar que el DNI sea un número válido
+      if (!isNaN(dni) && dni !== null && dni !== "") {
+        // Calcular la letra del DNI
+        var resto = dni % 23;
+        var letraCalculada = letrasDNI[resto];
+
+        // Mostrar mensaje con la letra calculada
+        alert("Tu DNI completo es: " + dni + letraCalculada);
+      } else {
+        // Mostrar mensaje de error y volver a solicitar el DNI
+        alert("Por favor, introduce un número de DNI válido.");
+        validarDNI();
+      }
+    }
+  </script>
 </head>
 <body>
-  <script>
-
-function validateDNI(dni) {
-
-  var letters = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
-
-  var number = 0;
-  var pow = 1;
-
-  for(var i = 0; i < dni.length-1; i++) {
-    number += (dni[i] - '0') * pow;
-    pow *= 10;
-  }
-
-  var letter = dni[8];
-
-  var result = number % 23;
-
-  if(letters[result] === letter) {
-    alert("El DNI " + dni + " es correcto");
-    return true;
-  } else {
-    alert("El DNI " + dni + " no es correcto");
-    return false;
-  }
-
-}
-
-var dni;
-
-do {
-  dni = prompt("Introduce tu DNI (8 números + letra): ");
-} while(!validateDNI(dni));
-
-
-</script>
-
+  <h1>Validación de DNI</h1>
+  <button onclick="validarDNI()">Validar DNI</button>
 </body>
 </html>
