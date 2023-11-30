@@ -6,7 +6,9 @@
   <title>Validación de DNI</title>
   <script>
  function validarDNI() {
+var mayusculas = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
+var minusculas = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var letrasDNI = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
 
 var dni = prompt("Introduce tu número de DNI:");
@@ -21,7 +23,19 @@ for(var i = 0; i < dni.length; i++) {
     numero += dni[i];
   }
 }
+for(var i = 0; i < mayusculas.length; i++) {
+    if(dni[8] === mayusculas[i]) {
+      letra = mayusculas[i];
+      break;
+    }
+  }
 
+  for(var i = 0; i < minusculas.length; i++) {
+    if(dni[8] === minusculas[i]) {
+      letra = mayusculas[i];
+      break;
+    }
+  }
 if(!isNaN(numero)) {
   numero = Number(numero); // Convertir a número
 
@@ -33,7 +47,7 @@ if(!isNaN(numero)) {
 
     // Comparar letras
     if(letrasDNI[resto] === letra) {
-      alert("Tu DNI completo es: " + dni);
+      alert("Tu DNI completo es correcto: " + dni);
     } else {
       alert("Letra del DNI incorrecta");
     }
