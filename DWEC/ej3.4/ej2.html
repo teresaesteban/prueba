@@ -3,66 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Validación de DNI</title>
+  <title>Ej2</title>
   <script>
- function validarDNI() {
-var mayusculas = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+// Función para validar el número y la letra de un DNI
+function validarDNI() {
+      // Definición de arreglos con letras y números para validar el DNI
+      var mayusculas = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+      var minusculas = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+      var letrasDNI = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
 
-var minusculas = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var letrasDNI = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+      // Solicitar al usuario que introduzca su número de DNI
+      var dni = prompt("Introduce tu número de DNI:");
 
-var dni = prompt("Introduce tu número de DNI:");
+      // Separar el número y la letra del DNI
+      var numero = '';
+      var letra = '';
+      for(var i = 0; i < dni.length; i++) {
+        if(i == 8) {
+          letra = dni[i];
+        } else {
+          numero += dni[i];
+        }
+      }
 
-// Separar el número y la letra
-var numero = '';
-var letra = '';
-for(var i = 0; i < dni.length; i++) {
-  if(i == 8) {
-    letra = dni[i];
-  } else {
-    numero += dni[i];
-  }
-}
-for(var i = 0; i < mayusculas.length; i++) {
-    if(dni[8] === mayusculas[i]) {
-      letra = mayusculas[i];
-      break;
+      // Validar si la letra ingresada es una mayúscula o minúscula
+      for(var i = 0; i < mayusculas.length; i++) {
+        if(dni[8] === mayusculas[i]) {
+          letra = mayusculas[i];
+          break;
+        }
+      }
+
+      for(var i = 0; i < minusculas.length; i++) {
+        if(dni[8] === minusculas[i]) {
+          letra = mayusculas[i];
+          break;
+        }
+      }
+
+      // Validar si el número del DNI es un número válido
+      if(!isNaN(numero)) {
+        numero = Number(numero); // Convertir a número
+
+        // Validar la longitud del número del DNI
+        if(numero >= Math.pow(10, 7) && numero < Math.pow(10, 8)) {
+
+          // Calcular la letra correspondiente al número del DNI
+          var resto = numero % 23;
+
+          // Comparar la letra calculada con la letra ingresada
+          if(letrasDNI[resto] === letra) {
+            alert("Tu DNI completo es correcto: " + dni);
+          } else {
+            alert("Letra del DNI incorrecta");
+          }
+
+        } else {
+          alert("El DNI debe tener 8 números");
+        }
+
+      } else {
+        alert("El DNI debe contener solo números");
+      }
     }
-  }
 
-  for(var i = 0; i < minusculas.length; i++) {
-    if(dni[8] === minusculas[i]) {
-      letra = mayusculas[i];
-      break;
-    }
-  }
-if(!isNaN(numero)) {
-  numero = Number(numero); // Convertir a número
-
-  // Validar longitud
-  if(numero >= Math.pow(10, 7) && numero < Math.pow(10, 8)) {
-
-    // Calcular letra
-    var resto = numero % 23;
-
-    // Comparar letras
-    if(letrasDNI[resto] === letra) {
-      alert("Tu DNI completo es correcto: " + dni);
-    } else {
-      alert("Letra del DNI incorrecta");
-    }
-
-  } else {
-    alert("El DNI debe tener 8 números");
-  }
-
-} else {
-  alert("El DNI debe contener solo números");
-}
-
-}
-
-validarDNI();
+    // Llamada a la función de validación del DNI al cargar la página
+    validarDNI();
   </script>
 </head>
 <body>

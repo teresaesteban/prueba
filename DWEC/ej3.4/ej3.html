@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Ej3</title>
 </head>
+
 <body>
   <script>
     // Definición de una función constructora llamada ProductosAlimenticios
@@ -14,17 +15,18 @@
       this.nombre = nombre;
       this.precio = precio;
 
-      // Método que imprime los datos del producto en la consola
-      this.imprimeDatos = function() {
-        console.log(`Código: ${this.codigo}`);
-        console.log(`Nombre: ${this.nombre}`);
-        console.log(`Precio: ${this.precio}`);
+      // Método que imprime los datos del producto
+      this.imprimeDatos = function () {
+        document.write('<br>Código: ' + this.codigo);
+
+        document.write('<br>Nombre: ' + this.nombre);
+        document.write('<br>Precio: ' + this.precio);
       }
     }
 
     // Creación de instancias de ProductosAlimenticios
-    const producto1 = new ProductosAlimenticios(1, 'Arroz', 500);
-    const producto2 = new ProductosAlimenticios(2, 'Frijoles', 400);
+    const producto1 = new ProductosAlimenticios(1, 'Colacao', 200);
+    const producto2 = new ProductosAlimenticios(2, 'Sacarina', 400);
     const producto3 = new ProductosAlimenticios(3, 'Azúcar', 100);
 
     // Creación de un array que contiene los productos creados
@@ -33,7 +35,7 @@
     // Bucle for para recorrer el array de productos e imprimir sus datos
     for (var i = 0; i < productos.length; i++) {
       productos[i].imprimeDatos(); // Llamada al método imprimeDatos de cada producto
-      console.log(''); // Imprime una línea en blanco entre cada producto
+      document.write(''); // Imprime una línea en blanco entre cada producto
     }
   </script>
 </body>
