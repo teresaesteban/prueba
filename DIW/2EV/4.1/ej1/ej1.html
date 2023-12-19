@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+div.mapa_imagen {
+  position: relative
+}
+ul.notas li {
+  list-style: none;
+  display: none;
+  position: absolute;
+  border: medium solid white;
+}
+div.mapa_imagen:hover ul.notas li {
+  display: block;
+}
+ul.notas li p {
+  margin: 10px 0 0 0;
+  padding: .3em;
+  display: none;
+  background: #FFF;
+  opacity: 0.65;
+  position: absolute;
+  top: 100%;
+}
+ul.notas li:hover p {
+  display: block;
+}
+
+ul.notas li#nota1 {
+  width: 100px; height: 100px; top: 150px; left: 300px;
+}
+
+ul.notas li#nota2 {
+  width: 160px; height: 130px; top: 10px; left: 80px;
+}
+
+ul.notas li#nota3 {
+  width: 70px; height: 50px; top: 155px; left: 40px;
+}
+/* Ajustes específicos para el texto en diferentes posiciones */
+ul.notas li#nota2 p {
+  left: 100%; /* Aparecerá a la derecha del recuadro */
+  top: 50%;
+  margin-left: 10px; /* Espacio adicional de 10px */
+}
+
+ul.notas li#nota1 p {
+  right: 100%; /* Aparecerá a la izquierda del recuadro */
+  top: 0;
+  margin-right: 10px; /* Espacio adicional de 10px */
+}
+
+ul.notas li#nota3 p {
+  left: 0; /* Aparecerá a la izquierda del recuadro */
+  top: 100%;
+  margin-top: 10px; /* Espacio adicional de 10px */
+}
+  </style>
+</head>
+<body>
+  <div class="mapa_imagen">
+    <img src="imagenes/Fondo marino.jpg"/>
+    <ul class="notas">
+      <li id="nota1"><p>Todo el mar es suyo :)</p></li>
+      <li id="nota2"><p>Dan ganas de tirarse...</p></li>
+      <li id="nota3"><p>¡Me encanta este color azul</p></li>
+    </ul>
+  </div>
+</body>
+</html>
