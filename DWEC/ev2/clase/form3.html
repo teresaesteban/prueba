@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+
+<body>
+  <form action="URL" method="post" name="formValidado" onsubmit="return validacion()">
+    <fieldset>
+      <legend>Formulario</legend>
+
+      <div>
+        <label for="nombre">Nombre </label>
+        <input type="text" id="nombre" name="nombre" required/>
+      </div>
+
+      <div>
+        <label for="telefono">Teléfono </label>
+        <input type="tel" id="telefono" name="telefono" required/>
+      </div>
+
+      <div>
+        <label for="dia">Día </label>
+        <input type="number" id="dia" name="dia" min="1" max="31" required/>
+      </div>
+
+      <div>
+        <label for="mes">Mes </label>
+        <input type="text" id="mes" name="mes" required/>
+      </div>
+
+      <div>
+        <label for="ano">Año </label>
+        <input type="number" id="ano" name="ano" min="1900" max="2024" required/>
+      </div>
+
+      <div>
+        <input type="checkbox" id="validacion" name="validacion" required/>
+        <label for="validacion">Acepto los términos y condiciones</label>
+      </div>
+
+      <input class="btn" type="submit" value="Darme de alta"/>
+
+    </fieldset>
+  </form>
+  <script>
+    function validaCampo() {
+      valor = document.getElementById("nombre").value;
+      if (valor == null || valor.length == 0) {
+        alert("El campo no puede ser vacío");
+        return false;
+      }
+      return true;
+    }
+
+    function validaNum() {
+      valor = document.getElementById("telefono").value;
+      if (isNaN(valor)) {
+        alert("El campo tiene que ser numérico");
+        return false;
+      }
+      return true;
+    }
+
+    function validaFecha() {
+      var dia = document.getElementById("dia").value;
+      var mes = document.getElementById("mes").value;
+      var anio = document.getElementById("ano").value;
+      fecha = new Date(anio, mes - 1, dia);
+      if (isNaN(fecha)) {
+        alert("La fecha no es correcta");
+        return false;
+      }
+      alert("La fecha introducida es: " + fecha);
+      return true;
+    }
+
+    function validaCheck() {
+      elemento = document.getElementById("validacion");
+      if (!elemento.checked) {
+        alert("La casilla no ha sido validada");
+        return false;
+      }
+      return true;
+    }
+
+    function validacion() {
+      if (validaNum() == true && validaCampo() == true && validaFecha() == true && validaCheck() == true) {
+        return true;
+      } else {
+        alert("error");
+        return false;
+      }
+    }
+  </script>
+
+</body>
+
+</html>

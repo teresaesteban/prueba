@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+    <form id="miform"  method="post" onsubmit="validar(event)" action="Ejercicio 2 pag53.html">
+        <label>Nombre:</label><input type="text" name="nombre" id="nombre">
+        <br>
+        <label>Telefono:</label><input type="text" name="telefono" id="telefono"><br>
+        <label>Dia:</label><input type="text" name="dia" id="dia">
+        <label>Mes:</label><input type="text" name="mes" id="mes">
+        <label>Año:</label><input type="text" name="anio" id="anio"><br>
+        <label>Validación:</label><input type="checkbox" name="cuadro" id="cuadro">
+        <!-- <input type="submit" value="enviar"> -->
+        <button type="button" id="enviar">Enviar</button>
+    </form>
+
+</body>
+<script>
+    const enviar = document.getElementById('enviar');
+
+    enviar.addEventListener('click', validar2);
+
+
+function validar(e) {
+    e.preventDefault();
+    alert("hola");
+}
+
+function validar2() {
+    let form = document.getElementById("miform");
+    let validNombre = validarNombre();
+    let validTelefono = validarTelefono();
+    let validFecha = validarFecha();
+    let validCuadro = validarCuadro();
+    
+    if (validNombre && validTelefono && validCuadro) {
+        form.submit();
+    }
+    
+
+}
+
+    function validarNombre() {
+        valor = document.getElementById("nombre").value;
+        console.log(valor);
+        if (valor == null || valor.length == 0) {
+            alert("Nombre no valido");
+            return false;
+        }
+        return true;
+    }
+    function validarTelefono() {
+        valor = document.getElementById("telefono").value;
+        let regex = /^[0-9]{9}$/;
+        if (!regex.test(valor)) {
+            alert("Teléfono no valido");
+            return false;
+        }
+        return true;
+    }
+    function validarFecha() {
+        var dia = document.getElementById("dia").value;
+        var mes = document.getElementById("mes").value;
+        var anio = document.getElementById("anio").value;
+        fecha = new Date(anio, mes-1, dia);
+        console.log(fecha);
+        if (isNaN(fecha)) {
+            alert("Fecha no valida");
+            return false;
+        }
+        return true;
+    }
+    function validarCuadro() {
+        valor = document.getElementById("cuadro").value;
+        if (!cuadro.checked) {
+            alert("Cuadro obligatorio");
+            return false;
+        }
+        return true;
+    }
+
+</script>
+
+</html>
