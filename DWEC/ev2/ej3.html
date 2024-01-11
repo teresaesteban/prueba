@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejercicio 4.1.3</title>
+		<script>
+			function permite(elEvento, permitidos, elemento, numCaracteres) {
+				// Variables que definen los caracteres permitidos.
+				var numeros = "0123456789";
+				var caracteres = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+				var numeros_caracteres = numeros + caracteres;
+
+				// Selección de los caracteres a partir del parámetro de la función.
+				switch (permitidos) {
+					case 'num':
+						permitidos = numeros;
+						break;
+					case 'car':
+						permitidos = caracteres;
+						break;
+					case 'num_car':
+						permitidos = numeros_caracteres;
+						break;
+				}
+
+				// Obtención de la tecla pulsada.
+				var evento = elEvento || window.event;
+				var codigoCaracter = evento.charCode || evento.keyCode;
+				var caracter = String.fromCharCode(codigoCaracter);
+
+				// Comprobación si la tecla pulsada se encuentra en los caracteres permitidos
+				// o si es una tecla especial.
+				var permitido = permitidos.indexOf(caracter) != -1;
+				var longitud = elemento.value.length < numCaracteres;
+
+				return (permitidos.indexOf(caracter) != -1 && elemento.value.length < numCaracteres);
+			}
+		</script>
+	</head>
+	<body>
+		<label>Solo números
+			<input type="text" onkeypress="return permite(event, 'num', this, 10)" />
+		</label>
+		<label>Solo letras
+			<input type="text" onkeypress="return permite(event, 'car', this, 10)" />
+		</label>
+		<label>Letras y números
+			<input type="text" onkeypress="return permite(event, 'num_car', this, 10)" />
+		</label>
+	</body>
+</html>

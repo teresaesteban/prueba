@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejercicio 4.1.3</title>
+		<script>
+			function permite(elEvento, permitidos, elemento, numCaracteres) {
+				
+				// Variables que definen los caracteres permitidos.
+				var numeros = "0123456789";
+				var caracteres = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+				
+				var numeros_caracteres = numeros + caracteres;
+				
+				// Selección de los caracteres a partir del parámetro de la función.
+				switch (permitidos) {
+					case 'num':
+						permitidos = numeros;
+						break;
+					case 'car':
+						permitidos = caracteres;
+						break;
+					case 'num_car':
+						permitidos = numeros_caracteres;
+						break;
+				}
+				
+				// Obtención de la tecla pulsada.
+				var evento = elEvento || window.event; // OR.
+				var codigoCaracter = evento.charCode || evento.keyCode; // "charCode" para obtener información adicional sobre el evento "keypress". En este caso, para las teclas normales, el código del carácter de la tecla que se ha pulsado. Para las teclas especiales, 0.
+																		// "keyCode" para las teclas normales, no definido. Para las teclas especiales, el código interno de la tecla.
+				var caracter = String.fromCharCode(codigoCaracter); // Devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
+				
+				// Comprobación si la tecla pulsada se encuentra en los caracteres permitidos
+				// o si es una tecla especial.
+				var permitido = permitidos.indexOf(caracter) != -1;
+				var longitud = elemento.value.length < numCaracteres; // "elemento" es "this", el elemento XHTML que ha provocado el evento.
+				
+				return (permitidos.indexOf(caracter) != -1 && elemento.value.length < numCaracteres); // Si la función "permite" del manejador de eventos "onkeypress"
+			}																						  // devuelve "false", no se captura el evento "keypress".
+		</script>
+	</head>
+	<body>
+		<label>Solo números
+			<input type="text" onkeypress="return permite(event, 'num', this, 10)" />
+		</label>
+		<label>Solo letras
+			<input type="text" onkeypress="return permite(event, 'car', this, 10)" />
+		</label>
+		<label>Letras y números
+			<input type="text" onkeypress="return permite(event, 'num_car', this, 10)" />
+		</label>
+	</body>
+</html>
+
+<!--
+    Para hacer el ejercicio hemos tenido que desarrollar algo más la función "permite", introduciendo dos
+	parámetros adicionales, "elemento" y "numCaracteres". El primero lo usamos para controlar los caracteres
+	que tiene el "input" en cuestión y el segundo para definir el máximo número de caracteres posibles.
+    
+	Observa que la tecla pulsada se obtiene mediante:
+		var codigoCaracter = evento.charCode || evento.keyCode;
+	
+	Dependiendo del navegador y de la tecla pulsada (tecla especial como MAYS, CTRL o no), obtendremos un
+	"charcode" o un "keycode" distinto.
+	¡Las discrepancias entre los distintos navegadores para eventos de teclas son para volverse loco!
+	Y el caracter al que corresponde mediante un método de la clase "String.fromCharCode".
+    
+	Se ha eliminado la parte de código de "teclas especiales" ya que si no, por ejemplo, no funciona en algún
+	navegador. Por ejemplo, se "traga" el %. Sin embargo, ahora no funcionan las teclas	especiales en algún
+	otro navegador... http://unixpapa.com/js/key.html
+	
+	JavaScript define una variable especial llamada "this" que se crea automáticamente y se emplea en
+	algunas técnicas avanzadas de programación. En los eventos, se puede utilizar la variable "this" para
+	referirse al elemento XHTML que ha provocado el evento.
+	En el ejemplo, a la función externa se le pasa el parámetro "this", que dentro de la función se denomina
+	"elemento". Al pasar "this" como parámetro, es posible acceder de forma directa desde la función externa
+	a las propiedades del elemento que ha provocado el evento:
+	https://www.arkaitzgarro.com/javascript/capitulo-15.html
+	
+	Las propiedades "charCode", "keyCode" y "which" han quedado obsoletas y ya se debería usar la propiedad
+	"key" en su lugar, es la que tiene mayor soporte de navegadores.
+	
+	Para controlar el máximo número de caracteres podríamos haber utilizado el atributo "maxlength" de HTML5.
+	
+	No merece la pena luchar contra todo esto, más adelante se trabajará a un nivel más alto mediante jQuery :-)
+-->

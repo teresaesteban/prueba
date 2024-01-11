@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Contador de Caracteres</title>
+		<script>
+			function verificarLimite(evento, limiteCaracteres) {
+				var elemento = document.getElementById("cajaTexto");
+				var codigoCaracter = evento.which || evento.keyCode;
+				if (elemento.value.length >= limiteCaracteres) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+
+			function actualizarInformacion(limiteCaracteres) {
+				var elemento = document.getElementById("cajaTexto");
+				var informacion = document.getElementById("informacion");
+				if (elemento.value.length >= limiteCaracteres) {
+					informacion.innerHTML = "Límite alcanzado: " + limiteCaracteres + " caracteres";
+				} else {
+					informacion.innerHTML = "Caracteres restantes: " + (limiteCaracteres - elemento.value.length);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="informacion">Límite alcanzado: 100 caracteres</div>
+		<textarea id="cajaTexto" rows="6" cols="30" onkeypress="return verificarLimite(event, 100);" onkeyup="actualizarInformacion(100);"></textarea>
+	</body>
+</html>
+
+

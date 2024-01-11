@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <h2>Formulario</h2>
+
+    <form name="formulario">
+      <label>
+        <input type="checkbox" name="alta"> Marcar para alta
+      </label>
+      <br>
+      <button type="button" onclick="enviar()">Enviar</button>
+    </form>
+
+
+    <script>
+      function enviar() {
+        if (formulario.alta.checked == true) {
+          formulario.action = "alta.html";
+        }
+        if (formulario.alta.checked == false) {
+          formulario.action = "baja.html";
+        }
+        formulario.submit(); // The form is submitted.
+      }
+      </script>
+
+
+</body>
+</html>
+
