@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, charset=utf-8" />
+    <title>Naturaleza - Página 4</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header class="container-fluid my-4 row align-items-center justify-content-evenly">
+        <a href="index.html" id="logo" class="col-sm-auto">
+            <img src="images/004-hoja-2.png" alt="logo" class="img-fluid">
+        </a>
+        <div class="col-sm-auto">
+            <h1 class="text-center fw-bold titulo">Lo mejor de la naturaleza</h1>
+        </div>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid ms-5">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">Páginas</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="desiertos.html">Desiertos</a>
+                            <a class="dropdown-item" href="pagina3.html">Página 3</a>
+                            <a class="dropdown-item" href="pagina4.html">Página 4</a>
+                        </div>
+                    </li>
+                    <!-- Agregar más enlaces según sea necesario -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <div class="container my-4">
+        <!-- Primer párrafo con lista -->
+        <h3>Impacto del Cambio Climático en la Naturaleza</h3>
+        <p>El cambio climático tiene consecuencias significativas en los elementos naturales. A continuación, se enumeran algunos de los impactos más destacados:</p>
+        <ul>
+            <li>Alteraciones en patrones climáticos</li>
+            <li>Desglaciación y aumento del nivel del mar</li>
+            <li>Extinción de especies</li>
+            <li>Eventos climáticos extremos</li>
+        </ul>
+
+        <!-- Segundo párrafo con tabla -->
+        <h3>Efectos Específicos del Cambio Climático</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Efecto</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Desertificación</td>
+                    <td>Expansión de áreas desérticas</td>
+                </tr>
+                <tr>
+                    <td>Derretimiento de Glaciares</td>
+                    <td>Impacto en el suministro de agua dulce</td>
+                </tr>
+                <!-- Agregar más filas según sea necesario -->
+            </tbody>
+        </table>
+
+        <!-- Tercer párrafo con formulario de contacto -->
+        <h3>Comparte tus Pensamientos</h3>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        <!-- Cuarto párrafo -->
+        <h3>Un Llamado a la Acción</h3>
+        <p>Es crucial tomar medidas para mitigar el cambio climático y proteger la naturaleza. A través de la conciencia y la acción, podemos contribuir a preservar la belleza natural para las generaciones futuras.</p>
+    </div>
+
+    <!-- Pie de página -->
+    <div class="pie container-fluid bg-dark d-flex align-items-center p-3">
+        <div class="container">
+            <p class="text-white m-0">[Nombre del Alumno/a]</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

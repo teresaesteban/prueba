@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+</head>
+<body>
+	<script>
+		function agregarInput() {
+
+			var nuevoInput = document.createElement("input");
+
+			// Propiedades CSS.
+			nuevoInput.setAttribute("type", "text");
+			nuevoInput.style.display = 'block';
+
+			// Referencias para colocar la nueva caja de texto.
+			var referencia = document.getElementById('submit');
+			var formulario = referencia.parentNode;
+
+			// Se inserta el elemento "input".
+			formulario.insertBefore(nuevoInput, referencia);
+		}
+	</script>
+	<form action="">
+		<input type="text" style="display:block;" />
+		<input type="submit" id="submit" value="Reiniciar" /><br /><br />
+		<input type="button" value="Agregar más cajas" onclick="agregarInput();" />
+	</form>
+</body>
+</html>

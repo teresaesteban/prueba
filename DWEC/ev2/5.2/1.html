@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+		<script>
+			function agregarElemento() {
+
+				var nuevoElemento = document.createElement('li'); // Crea el nodo de tipo "elemento" "li".
+				var nuevoTexto = document.createTextNode('Nuevo elemento de prueba'); // Crea el nodo de tipo "texto".
+				nuevoElemento.appendChild(nuevoTexto); // Asocia al nodo "elemento" el nodo "texto" para que este último sea su hijo.
+
+				var lista = document.getElementById('lista'); // Recupera el nodo de tipo "elemento" "ul".
+				lista.appendChild(nuevoElemento); // Agrega el elemento a la lista.
+
+				var nuevoElementoHTML = '<li>Otro texto de prueba</li>';
+				lista.innerHTML = lista.innerHTML + nuevoElementoHTML; // Agrega otro elemento a la lista.
+			}
+
+			function agregarElementoUnaSolaVez() { // Con el gestor de eventos. Solo se ejecuta la 1ª vez que se pulsa.
+
+				var nuevoElemento = document.createElement('li'); // Crea el nodo de tipo "elemento" "li".
+				var nuevoTexto = document.createTextNode('Nuevo elemento de prueba'); // Crea el nodo de tipo "texto".
+				nuevoElemento.appendChild(nuevoTexto); // Asocia al nodo "elemento" el nodo "texto" para que este último sea su hijo.
+
+				var lista = document.getElementById('lista'); // Recupera el nodo de tipo "elemento" "ul".
+				lista.appendChild(nuevoElemento); // Agrega el elemento a la lista.
+
+				var nuevoElementoHTML = '<li>Otro texto de prueba</li>';
+				lista.innerHTML = lista.innerHTML + nuevoElementoHTML; // Agrega otro elemento a la lista.
+
+				document.getElementById("botonAgregarUnaSolaVez").removeEventListener("click", agregarElementoUnaSolaVez);
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="lista">
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Consectetuer adipiscing elit</li>
+			<li>Sed mattis enim vitae orci</li>
+			<li>Phasellus libero</li>
+			<li>Maecenas nisl arcu</li>
+		</ul>
+
+		<input type="button" value="Agregar elementos" onclick="agregarElemento();" /><br /><br />
+
+		<input type="button" id="botonAgregarUnaSolaVez" value="Agregar elementos una sola vez" />
+
+		<script>
+			// Con el gestor de eventos.
+			document.getElementById("botonAgregarUnaSolaVez").addEventListener("click", agregarElementoUnaSolaVez);
+		</script>
+	</body>
+</html>

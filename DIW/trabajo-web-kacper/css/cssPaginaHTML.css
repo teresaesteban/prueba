@@ -1,0 +1,296 @@
+/*Todas las paginas*/
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+}
+/*------------------------------*/
+h1{
+  font-size: 2.3em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h2{
+  text-align: center;
+  margin: 20px;
+  font-size: 40px;
+}
+#imagen{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+/*_-----------------------*/
+table{
+  text-align: center;
+  background-color: rgb(192, 192, 192);
+}
+.tabla{
+  display: flex;
+  justify-content: center;
+
+}
+.derecha{
+  text-align: right;
+
+}
+.textoder{
+  padding-right: 25px;
+}
+.izquierda{
+  text-align: left;
+
+}
+.textoizq{
+  padding-left: 25px;
+}
+.tituloTabla{
+  font-size: 65px;
+}
+/*Header*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #dc3545;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    height: 215px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+
+/*footer*/
+footer{
+  background-color: #dc3545;
+  color: white;
+  text-align: center;
+}
+#primeraFila{
+    height: 40px;
+    padding-top: 12px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+#primeraFila div{
+    width: 180px;
+    height: 40px;
+    background-color: white;
+    color: #dc3545;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#segundaFila{
+    display: flex;
+    height: 250px;
+    padding: 10px;
+    justify-content: center;
+}
+
+#segundaFila #primeraColumna{
+    height: 257px;
+    width: 360px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 16px;
+    list-style-type: none;
+}
+
+#segundaFila #primeraColumna ul{
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#segundaFila #primeraColumna ul li{
+    margin: 8px;
+}
+
+#segundaFila #segundaColumna{
+    height: 257px;
+    width: 360px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 16px;
+    list-style-type: none;
+}
+
+#segundaFila #segundaColumna #listas{
+    display: flex;
+    justify-content: center;
+}
+
+#segundaFila #segundaColumna #listas div{
+    height: 150px;
+    width: 140px;
+}
+
+#segundaFila #segundaColumna ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+#segundaFila #segundaColumna ul li{
+    margin: 8px;
+}
+
+#segundaFila #segundaColumna ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+#segundaFila #terceraColumna{
+    height: 257px;
+    width: 360px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 16px;
+    list-style-type: none;
+}
+#segundaFila #terceraColumna p{
+    margin-top: 5px;
+}
+
+#segundaFila #terceraColumna h6{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#segundaFila h5{
+    font-size: 22px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+#terceraFila{
+    display: flex;
+    height: 50px;
+    padding-bottom: 40px;
+    justify-content: center;
+}
+
+#terceraFila #iconosRedesSociales{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#terceraFila #iconosRedesSociales li{
+    list-style-type: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#terceraFila #iconosRedesSociales img{
+    height: 15px;
+    width: 15px;
+}
+
+
+/*Pagina Calendario*/
+#seccionTabla{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+#seccionTabla table tr td{
+    height: 50px;
+    width: 155px;
+}
+#seccionTabla table{
+    background-color: #dc3545;
+    color: white;
+}
+#seccionTabla table th{
+    padding: 10px;
+}
+
+#seccionTabla table .partido{
+    background-color: white;
+    color: #dc3545;
+}
+
+video{
+    height: 400px;
+    width: 700px;
+}
+
+#resultadosRecientes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#resultadosRecientes h3{
+    color: #dc3545;
+}
+
+#calendarioVideoAudio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#calendarioVideoAudio #audio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+    padding: 10px;
+    margin: 20px;
+}
+#cabecera-logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cabecera-logos img{
+    height: 100px;
+    width: 100px;
+}
+#cabecera-logos img#logoCentro{
+    height: 32px;
+    width: 100px;
+}
+
+#navegacionBreadcrumb{
+    width: 300px;
+    display: flex;
+    color: rgba(33, 37, 41, 0.75);
+}
+#navegacionBreadcrumb a{
+    color: #0d6efd;
+}
+
+section{
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: Arial, sans-serif; /* Especifica una fuente legible */
+    font-size: 16px; /* Tamaño de fuente legible */
+    line-height: 1.6; /* Espaciado entre líneas para una mejor legibilidad */
+    text-align: justify;
+    }

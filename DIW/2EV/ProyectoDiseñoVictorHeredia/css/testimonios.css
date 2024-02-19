@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#testimonios {
+    margin-top: 50px;
+}
+
+#testimonios img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+    top: 100px;
+}
+
+#testimonios img:hover +p {
+    display: block;
+    background-color:#00BFFF;
+    left: 200px;
+}
+
+#testimonios p {
+    display: none;
+    margin: 0;
+    font-size: 20px;
+    position: absolute;
+    top: 750px;
+    transform:translate(30%, 30%) ;
+}
+/* CSS Styles */
+
+.navbar {
+background-color: beige;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 250px;
+
+}
+
+.logo {
+    font-size: 1.2rem;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.menu-item {
+    padding: 0.5rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-link:hover {
+    color: #00BFFF;
+}
+
+.header {
+    background-color: #d9edf7; /* color de fondo del header */
+  padding: 20px; /* espacio interno del header */
+  box-sizing: border-box; /* incluir padding y borde en el tamaño total del elemento */
+  display: flex; /* usar flexbox para alinear elementos */
+  justify-content: space-between; /* alinear los elementos a los extremos */
+  align-items: center; /* alinear verticalmente los elementos */
+  width: 100%; /* ancho al 100% de la pantalla */
+  height: 200px; /* altura del header */
+}
+
+.header__title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    color: #333333;
+}
+
+.header__logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid blue;
+ }

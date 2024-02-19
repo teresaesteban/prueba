@@ -1,0 +1,268 @@
+.info-day {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  z-index: 1;
+}
+table {
+  margin-top: 80px;
+  margin-bottom: 150px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#testimonios {
+  margin-top: 50px;
+}
+
+#testimonios img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+  cursor: pointer;
+  position: relative;
+  top: 150px;
+}
+
+#testimonios img:hover +p {
+  display: block;
+  background-color:#00BFFF;
+  left: 200px;
+}
+
+#testimonios p {
+  display: none;
+  margin: 0;
+  font-size: 20px;
+  position: absolute;
+  top: 750px;
+  transform:translate(30%, 30%) ;
+}
+/* CSS Styles */
+
+.navbar {
+background-color: beige;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+margin-left: -100px; 
+width: 1200px;
+
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%; /* establecer la distancia desde el borde izquierdo de la ventana del navegador */
+  transform: translateX(-50%); /* centrar el footer horizontalmente */
+  width: 32%;
+  height: 8%;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid blue;
+  margin-left: 700px; /* mover el header 20px hacia la izquierda */
+
+}
+.logo {
+  font-size: 1.2rem;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.menu-item {
+  padding: 0.5rem;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-link:hover {
+  color:blue;
+}
+#walk:checked~#character {
+  background-position: 0 -870px;
+  animation: walk 1s steps(13, end) infinite;
+}
+
+@keyframes walk {
+  from {
+      background-position: 0 -870px;
+  }
+
+  to {
+      background-position: -2873px -870px;
+  }
+}
+.header {
+  background-color: #d9edf7; /* color de fondo del header */
+  padding: 20px; /* espacio interno del header */
+  box-sizing: border-box; /* incluir padding y borde en el tamaño total del elemento */
+  display: flex; /* usar flexbox para alinear elementos */
+  justify-content: space-between; /* alinear los elementos a los extremos */
+  align-items: center; /* alinear verticalmente los elementos */
+  width: 150%; /* ancho al 100% de la pantalla */
+  height: 200px; /* altura del header */
+  margin-left: -100px; /* mover el header 20px hacia la izquierda */
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 20px;
+  color: #333333;
+}
+
+.header__logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+#Semana1Diciembre{
+  height: 320px;
+  background-image: url(../img/spritesheet1diciembre.png);
+  position: relative;
+  margin: 10px auto; padding: 0;
+  width: 221px;
+  height: 221px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+#Semana1Diciembre:hover {background: url(../img/spritesheet1diciembre.png) -0px -247px no-repeat;width: 250px; height: 350px}
+
+#Semana2Diciembre{
+  height: 320px;
+  background-image: url(../img/spritesheet2diciembre.png);
+  position: relative;
+  margin: 10px auto; padding: 0;
+  width: 225px;
+  height: 225px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+#Semana2Diciembre:hover {background: url(../img/spritesheet2diciembre.png) -0px -254px no-repeat; width: 250px; height: 350px}
+
+#Semana3Diciembre{
+  height: 320px;
+  background-image: url(../img/spritesheet3Diciem.png);
+  position: relative;
+  margin: 10px auto; padding: 0;
+  width: 204px;
+  height: 247px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+#Semana3Diciembre:hover {background: url(../img/spritesheet3Diciem.png) -0px -260px no-repeat;   width: 300px; height: 390px;}
+#Semana4Diciembre{
+  height: 320px;
+  background-image: url(../img/spritesheet4diciembre.png);
+  position: relative;
+  margin: 10px auto; padding: 0;
+  width: 205px;
+  height: 246px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+#Semana4Diciembre:hover {background: url(../img/spritesheet4diciembre.png) -0px -286px no-repeat; width: 300px; height: 390px;}
+#Semana5Diciembre{
+  height: 320px;
+  background-image: url(../img/spritesheet5dicie.png);
+  position: relative;
+  margin: 10px auto; padding: 0;
+  width: 225px;
+  height: 225px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+#Semana5Diciembre:hover {background: url(../img/spritesheet5dicie.png) -0px -230px no-repeat; width: 300px; height: 300px;}
+#Semana6Diciembre{
+  height: 320px;
+  background-image: url(../img/spritesheet6dici.png);
+  position: relative;
+  margin: 10px auto; padding: 0;
+  width: 225px;
+  height: 225px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+#Semana6Diciembre:hover {background: url(../img/spritesheet6dici.png) -0px -252px no-repeat;width: 300px; height: 300px;}
+#Semana7Diciembre{
+  height: 320px;
+  background-image: url(../img/spritesheet7dicie.png);
+  position: relative;
+  margin: 10px auto; padding: 0;
+  width: 204px;
+  height: 247px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+#Semana7Diciembre:hover {background: url(../img/spritesheet7dicie.png) -0px -264px no-repeat;width: 300px; height: 300px;}
+#character {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 234px;
+  height: 170px;
+  background: url("../img/a.png") no-repeat;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+#animacion {
+  pointer-events: none;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translateX(-50%);
+  color: rgb(3, 3, 3);
+  padding: 5px;
+  border-radius: 5px;
+  width: 80vw;
+  height: 60vh;
+}
+
+input,
+label {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#character {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 234px;
+  height: 170px;
+  background: url("../img/a.png") no-repeat;
+}
+#animacion input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}

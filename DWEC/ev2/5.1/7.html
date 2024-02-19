@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+		<script>
+			function realizarCambio(enlace) {
+
+				enlace.title = "Nuevo título del enlace";
+
+				alert(enlace.title);
+			}
+		</script>
+	</head>
+	<body>
+		<a href="#" id="id_enlace" title="Enlace de ejemplo" onmouseover="realizarCambio(this);">Haz clic aquí</a>
+	</body>
+</html>

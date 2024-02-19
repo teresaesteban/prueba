@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+		<script>
+			var seCreoH3 = false; // Inicialización de una variable "memoria o estado anterior".
+
+			function realizarAccion(accion) {
+
+				var mensaje = document.getElementById("notificacion");
+
+				if (accion == 1) {
+					mensaje.innerHTML = " Has pasado el ratón por el enlace";
+					mensaje.style.display = "inline";
+
+				} else if (accion == 2) {
+					mensaje.innerHTML = " Has pulsado el enlace";
+					mensaje.style.color = "#0101ff";
+					mensaje.style.fontWeight = "bold";
+
+					if (!seCreoH3) { // Solo se ejecuta la 1ª vez que se pulsa.
+						// Se crea un nuevo elemento "h3" y se escribe un texto en él.
+						var nuevoH3 = document.createElement("h3");
+						nuevoH3.innerHTML = "Enlace pulsado";
+						// Se inicializa el nodo ya existente a una variable y se utiliza el método "insertBefore".
+						referencia = document.getElementById("id_enlace");
+						document.body.insertBefore(nuevoH3, referencia);
+						// Se guarda o memoriza el estado "enlace pulsado".
+						seCreoH3 = true;
+					}
+
+					return false;
+
+				} else {
+					mensaje.innerHTML = "";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href="#" id="id_enlace" title="Enlace de ejemplo" onmouseover="realizarAccion(1);" onclick="return realizarAccion(2);" onmouseout="realizarAccion(3);">Haz clic en el enlace</a>
+		<span id="notificacion" style="display:none;"></span>
+	</body>
+</html>

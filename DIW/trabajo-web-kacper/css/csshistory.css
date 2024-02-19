@@ -1,0 +1,203 @@
+body {
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+}
+/*------------------------------*/
+h1{
+font-size: 2.3em;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+h2{
+text-align: center;
+margin: 20px;
+font-size: 50px;
+}
+#imagen{
+display: flex;
+justify-content: center;
+margin: 20px;
+}
+#imagen img {
+width: 70%;
+}
+#video{
+display: flex;
+justify-content: center;
+margin: 20px;
+}
+#video video{
+width: 70%;
+}
+#audio{
+display: flex;
+justify-content: center;
+margin: 20px;
+}
+/*_-----------------------*/
+table{
+text-align: center;
+background-color: rgb(192, 192, 192);
+}
+#tabla{
+display: flex;
+justify-content: center;
+
+}
+.derecha{
+text-align: right;
+
+}
+.textoder{
+padding-right: 25px;
+}
+.izquierda{
+text-align: left;
+
+}
+.textoizq{
+padding-left: 25px;
+}
+#tituloTabla{
+font-size: 65px;
+}
+/*Header*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #dc3545;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  height: 215px;
+}
+
+nav {
+
+  display: flex;
+  justify-content: center;
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Notas sobre la imagen de la plantilla */
+.mapa_imagen {
+  position: relative;
+}
+ul.notas li {
+  list-style: none;
+  display: none;
+  position: absolute;
+  border: medium solid white;
+}
+.mapa_imagen:hover ul.notas li {
+  display: block;
+}
+ul.notas li p {
+  margin: 10px 0 0 0;
+  padding: .3em;
+  display: none;
+  background: #FFF;
+  opacity: 0.85;
+  position: absolute;
+  top: 100%;
+}
+ul.notas li:hover p {
+  display: block;
+}
+/* Ajustes específicos para las notas en diferentes posiciones */
+ul.notas li#nota1 {
+  width: 7%; height: 10%; top: 20%; left: 50%;
+}
+
+ul.notas li#nota2 {
+width: 7%; height: 10%; top: 46%; left: 45%;
+}
+
+ul.notas li#nota3 {
+width: 7%; height: 10%; top: 20%; left: 30%;
+}
+section{
+margin-left: 300px;
+margin-right: 300px;
+font-family: Arial, sans-serif; /* Especifica una fuente legible */
+font-size: 16px; /* Tamaño de fuente legible */
+line-height: 1.6; /* Espaciado entre líneas para una mejor legibilidad */
+text-align: justify;
+}
+/*parte de hover*/
+#contenedorCamisetas {
+  width: 100px;
+  height: 500px;
+  background-image: url("../imagenes/cubre-de-partidos-oficial-acb-2324-adultos.jpg");
+  position: relative;
+  margin: 10px auto;
+  padding: 0;
+  width: 48%;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+#camiseta li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  position: absolute;
+}
+#camisetaParteTrasera {
+left: 0%;
+top: 0%;
+width: 100%;
+height: 100%;
+}
+
+#camisetaParteTrasera:hover {
+background: url("../imagenes/cubre-de-partidos-oficial-acb-2324-adultoss.jpg") -10px -10px no-repeat;
+}
+
+   /*Pasar al ingles*/
+        /*Los elementos con clase ingles apareceran ocultos inicialmente*/
+        .english {
+          display: none;
+      }
+
+      /*Cuando el elemento input checkbox ingles este seleccionado aparecera el parrago con clase ingles*/
+      input.ingles:checked~div.english {
+          display: block;
+      }
+
+      /*Cuando el elemento input checkbox ingles este seleccionado ocultara el parrago con clase espaniol*/
+      input.ingles:checked~div.espanol {
+          display: none;
+      }
+
+      input.espaniol:checked~div.english {
+          display: none;
+      }
+
+      /*Cuando el elemento input checkbox ingles este seleccionado ocultara el parrago con clase espaniol*/
+      input.espaniol:checked~div.espanol {
+          display: block;
+      }
+
+      audio{
+          background-color: #7ebbd4;
+          padding: 5px;
+      }
+      .banderasIdioma{
+          margin-top: 15px;
+          width: 40px;
+          height: 30px;
+      }

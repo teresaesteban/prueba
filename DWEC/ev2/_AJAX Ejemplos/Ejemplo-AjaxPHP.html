@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo de AJAX con PHP</title>
+		<script>
+			var xhr = new XMLHttpRequest();
+			
+			function enviarDatosServidor() {
+				
+				var name = document.getElementsByTagName("input")[0].value;
+				var lastname = document.getElementsByTagName("input")[1].value;
+				//alert("Prueba: " + name + " " + lastname);
+				var parametros = 'name=' + name + '&lastname=' + lastname;
+				
+				// Cuando se produzca un cambio en el estado del objeto, se ejecuta la función.
+				xhr.onreadystatechange = recibirDatosServidor();
+				
+				// Se inicializa la instancia usando el método POST (más seguro que GET).
+				xhr.open("POST", "Ejemplo-AjaxPHP.php", true); // "true" porque es asíncrona.
+				
+				// Se indica el tipo de parámetros a enviar para que el método POST sea admitido.
+				// Esta cabecera indica el tipo de contenido: los datos enviados deben tratarse como los extraídos de un formulario.
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				
+				// Se abre la conexión y se envía la solicitud al servidor. Pasa datos como parámetros.
+				xhr.send(parametros);
+			}
+			
+			function recibirDatosServidor() {
+				
+				var elemento_destino = document.getElementById("elemento_destino");
+				//elemento_destino.innerHTML = "<br />" + "Prueba";
+				
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					elemento_destino.innerHTML = xhr.responseText; // Respuesta o devolución a la petición AJAX del servidor.
+				}
+				//alert(xhr.responseText);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Ejemplo de AJAX con PHP</h1>
+		<form method="post" action="http://localhost/DWEC/Ejemplo-AjaxPHP.php">
+			<input type="text" name="name" value="José">
+			<input type="text" name="lastname" value="Aguilar">
+			<br /><br />
+			<input type="submit" value="Enviar datos del formulario al Servidor Web sin AJAX" />
+		</form>
+		<br />
+		<input type="submit" value="Enviar datos del formulario al Servidor Web con AJAX" onclick="enviarDatosServidor();" />
+		<div id="elemento_destino">
+			<p>La información recibida mediante AJAX aparecerá aquí.</p>
+		</div>
+		<script>
+			enviarDatosServidor(); // Para no tener que pulsar 2 veces el botón, ya que la 1ª vez solo se abre la conexión.
+		</script>
+	</body>
+</html>
+
+<!--
+ATENCIÓN:
+No se puede trabajar con archivos locales. Los navegadores no permiten que el código JavaScript acceda al sistema de archivos.
+El sistema de archivos local está aislado para que, por ejemplo, no se pueda hacer doble "click" en un documento HTML de un
+archivo adjunto de correo electrónico, abrirlo en el navegador y hacer que cargue los archivos privados en el servidor del remitente.
+Para probar AJAX localmente es necesario instalar SIEMPRE un servidor Web local.
+
+Por ejemplo, si el servidor Web local es MAMP-Apache, este archivo debe estar en la carpeta "C:\MAMP\htdocs\DWEC"
+y la URL debe ser "localhost/DWEC/Ejemplo-AjaxPHP.html".
+-->

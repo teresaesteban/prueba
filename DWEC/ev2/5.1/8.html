@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+		<script>
+			function realizarAccion(accion) {
+
+				var mensaje = document.getElementById("notificacion");
+
+				if (accion == 1) {
+					mensaje.innerHTML = " Has pasado el ratón por el enlace";
+					mensaje.style.display = "inline";
+
+				} else if (accion == 2) {
+					mensaje.innerHTML = " Has pulsado el enlace";
+					mensaje.style.color = "#0101ff";
+					mensaje.style.fontWeight = "bold";
+
+				} else {
+					mensaje.innerHTML = "";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href="#" id="id_enlace" title="Enlace de ejemplo" onmouseover="realizarAccion(1);" onclick="realizarAccion(2);return false" onmouseout="realizarAccion(3);">Haz clic aquí</a>
+		<span id="notificacion" style="display:none;"></span>
+	</body>
+</html>

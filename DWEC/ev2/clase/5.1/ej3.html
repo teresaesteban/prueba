@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>DOM con evento</title>
+<script>
+function ratonEncima() {
+document.getElementsByTagName("div")[0].
+childNodes[0].nodeValue = "EL RATÓN ESTÁ ENCIMA";
+}
+function ratonFuera() {
+document.getElementsByTagName("div")[0].
+childNodes[0].nodeValue = "NO ESTÁ EL RATÓN ENCIMA";
+}
+</script>
+</head>
+<body>
+<div onmouseover="ratonEncima();" onmouseout="ratonFuera();">
+VALOR POR DEFECTO</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+	</head>
+	<body>
+		<button id="pinchable">Pulsa el botón</button>
+		<script>
+			document.getElementById("pinchable").onclick = accion;
+
+			var pulsado = 0;
+
+			function accion() {
+
+				pulsado = pulsado + 1;
+
+				if (pulsado == 6) { console.log("Se ha pulsado al botón más de 5 veces") };
+			}
+		</script>
+	</body>
+</html>

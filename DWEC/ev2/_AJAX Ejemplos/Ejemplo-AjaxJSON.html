@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo de AJAX con JSON</title>
+		<script>
+			function cargarDoc() {
+				var xhr = new XMLHttpRequest();
+				
+				var resultado = document.getElementById("elemento_destino");
+				
+				xhr.onreadystatechange = function() {
+					
+					if (xhr.readyState == 4 && xhr.status == 200) {
+						// Carga archivo JSON.
+						//alert("Prueba: " + xhr.responseText);
+						//var array = JSON.parse('{"nombre":"Luis", "apellido":"Cárdenas", "edad":30}');
+						var array = JSON.parse(xhr.responseText); // Si el servidor no es confiable.
+						
+						resultado.innerHTML = "<br />" + array.nombre + " " + array.apellido + " tiene " + array.edad + " años.";
+					}
+				};
+				
+				xhr.open("GET", "Ejemplo-AjaxJSON.json", true);
+				//xhr.setRequestHeader("Content-type", "application/json");
+				xhr.send(null);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Ejemplo de AJAX con JSON</h1>
+		<input type="button" value="Cargar datos" onclick="cargarDoc();"/>
+		<br />
+		<div id="elemento_destino">
+			<p>La información recibida mediante AJAX aparecerá aquí.</p>
+		</div>
+	</body>
+</html>

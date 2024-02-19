@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Sitio Web</title>
+    <link rel="stylesheet" href="cssPaginaHTML.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f2f2f2;
+        }
+        /*------------------------------*/
+        h1{
+          font-size: 2.3em;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        h2{
+          text-align: center;
+          margin: 20px;
+          font-size: 50px;
+        }
+        #imagen{
+          display: flex;
+          justify-content: center;
+          margin: 20px;
+        }
+        /*_-----------------------*/
+        table{
+          text-align: center;
+          background-color: rgb(192, 192, 192);
+        }
+        .tabla{
+          display: flex;
+          justify-content: center;
+
+        }
+        .derecha{
+          text-align: right;
+
+        }
+        .textoder{
+          padding-right: 25px;
+        }
+        .izquierda{
+          text-align: left;
+
+        }
+        .textoizq{
+          padding-left: 25px;
+        }
+        .tituloTabla{
+          font-size: 65px;
+        }
+        /*Header*/
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #dc3545;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            height: 215px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+  <header>
+    <img src="imagenes/25.png" alt="Descripción de la imagen" width="100px">
+    <h1>Club Baloncesto Breogán </h1>
+    <p>Entidad baloncestística de la ciudad de Lugo, España.</p>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="calendario.html">Calendario</a>
+    <a href="contactanos.html">Contactanos</a>
+    <a href="historico.html">Historico</a>
+    <a href="imagenes.html">Imagenes</a>
+    <a href="noticias.html">Noticias</a>
+    <a href="plantilla.html">Plantilla</a>
+    <a href="productos.html">Productos</a>
+    <a href="sobreNosotros.html">Sobre nosotros</a>
+</nav>
+
+<h2>CALENDARIO DEL MES DE FEBRERO</h2>
+
+<div id="seccionTabla">
+    <table><thead>
+        <tr>
+
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sábado</th>
+            <th>Domingo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td class="partido">Casademont Zaragoza vs Rio Breogan</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td class="partido">Rio Breogan vs Real Madrid</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td class="partido">Unicaja Malaga vs Rio Breogan</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+      <td>29</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    </tbody>
+    </table>
+</div>
+
+<hr>
+
+<div id="resultadosRecientes">
+    <h3>Ultimos resultados del equipo</h3>
+    <p>Rio Breogan 65 - 62 Valencia Basket</p>
+    <p>Rio Breogan 78 - 90 Barcelona Basket</p>
+    <p>Lenovo Tenerife 55 - 60 Rio Breogan</p>
+</div>
+
+<hr>
+
+<div id="calendarioVideoAudio">
+<h3>APOYO</h3>
+<p>Nuestro equipo necesita tu apoyo en esto partido. Por aqui te dejo unas canasta y el himo del equipo para que vayas calentado</p>
+
+<video controls>
+    <source src="video/Y2meta.app-SERGI GARCÍA, alma del triunfo de Río Breogán _ Liga Endesa 2023-24-(1080p).mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+</video>
+
+<div id="audio">
+    <h4>ESCUCHA EL HIMO PARA CANTARLO EN EL PABELLON</h4>
+    <audio controls>
+        <source src="video/Himno Club Baloncesto Breogán_zftSx6-4IUY.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+</div>
+</div>
+
+</body>
+       <!-- Footer -->
+<footer>
+  <div id="primeraFila">
+    <div>
+      <p>CSS</p>
+    </div>
+  </div>
+
+
+    <div id="segundaFila">
+      <div id="primeraColumna">
+        <h5>AUTORES</h5>
+        <hr>
+        <ul>
+          <li>Daniel Alvaro del Rio</li>
+          <li>Teresa Esteban Gracia</li>
+          <li>Kacper Konarzewski</li>
+        </ul>
+      </div>
+
+      <div id="segundaColumna">
+      <div>
+        <div>
+              <h5>SECCIONES</h5>
+        </div>
+        <hr>
+        <div id="listas">
+        <div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="contactanos.html">Contactanos</a></li>
+                <li><a href="historico.html" >Historico</a></li>
+                <li><a href="imagenes.html">Imagenes</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="plantilla.html">Plantilla</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <div id="terceraColumna">
+        <h5>Informacion</h5>
+        <hr>
+        <h6>Direccion oficina:</h6>
+        <p>breogan@ejemplo.com</p>
+        <br>
+        <h6>Telefono:</h6>
+        <p>+34 976 00 00 000</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="terceraFila">
+      <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+      <ul id="iconosRedesSociales">
+        <li><a href="https://twitter.com/CBBreogan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="imagenes/footer-twitter.png" alt=""></a></li>
+        <li><a href="https://www.instagram.com/cbbreogan/"><img src="imagenes/footer-instagram.png" alt=""></a></li>
+        <li><a href="https://www.facebook.com/CBBreoganSAD/?locale=es_ES"><img src="imagenes/footer-facebook.png" alt=""></a></li>
+      </ul>
+    </div>
+  </footer>
+</html>
+

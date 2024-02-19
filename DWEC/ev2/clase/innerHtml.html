@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Texto con JavaScript</title>
+</head>
+<body>
+
+    <h1 id="miTexto">¡Hola, mundo!</h1>
+    <button onclick="cambiarTexto()">Cambiar Texto</button>
+
+    <script>
+        function cambiarTexto() {
+            // Obtener el elemento con el id "miTexto"
+            var elementoTexto = document.getElementById("miTexto");
+
+            // Modificar el contenido utilizando la propiedad innerHTML
+            elementoTexto.innerHTML = "¡Texto modificado con JavaScript!";
+        }
+    </script>
+
+</body>
+</html>
+

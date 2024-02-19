@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+		<script>
+			function realizarPrueba(elemento) {
+
+				var nombreAtributo = elemento.attributes[1].nodeName;
+
+				var valorAtributo = elemento.attributes[1].nodeValue;
+
+				alert(nombreAtributo);
+				alert(valorAtributo);
+			}
+		</script>
+	</head>
+	<body>
+		<a href="#" id="id_enlace" title="Enlace de ejemplo" onclick="realizarPrueba(this);">Haz clic aquí</a>
+	</body>
+</html>

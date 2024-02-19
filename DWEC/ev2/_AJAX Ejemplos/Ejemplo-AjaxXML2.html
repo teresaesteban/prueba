@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo de AJAX con XML 2</title>
+		<style>
+			table,th,td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+			th,td {
+				padding: 5px;
+			}
+		</style>
+		<script>
+			function cargarDoc() {
+				var xhr = new XMLHttpRequest();
+				
+				xhr.onreadystatechange = function() {
+					
+					if (xhr.readyState == 4 && xhr.status == 200) {
+						
+						// Carga archivo XML.
+						var docXML = xhr.responseXML;
+						
+						var discos = docXML.getElementsByTagName("CD");
+						var tabla = "<tr><th>Título</th><th>Artista</th></tr>";
+						
+						for (var i=0; i<discos.length; i++) {
+							tabla += "<tr><td>";
+							tabla += discos[i].getElementsByTagName("TITLE")[0].textContent;
+							tabla += "</td><td>";
+							tabla += discos[i].getElementsByTagName("ARTIST")[0].textContent;
+							tabla += "</td></tr>";
+						}
+						
+						document.getElementById("elemento_destino").innerHTML = tabla;
+					}
+				};
+				
+				xhr.open("GET", "Ejemplo-AjaxXML2.xml", true);
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Ejemplo de AJAX con XML</h1>
+		<input type="button" value="Cargar lista de CDs" onclick="cargarDoc();"/>
+		<br />
+		<table id="elemento_destino">
+			<p>La información recibida mediante AJAX aparecerá debajo de aquí.</p>
+		</table>
+	</body>
+</html>

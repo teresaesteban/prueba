@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>Hola Mundo</div>
+  <script>
+    var div =document.createElement("div");
+    var texto=document.createTextNode("Otro Hola Mundo");
+    div.appendChild(texto);
+    document.body.appendChild(div);
+    var div_1=document.getElementsByTagName("div")[1];
+    document.parentNode.removeChild(div_1);
+    alert ("Nodo creado anteriormente se ha eleminado");
+    var nuevoDiv=document.createElement("div");
+    var nuevoTexto=document.createTextNode("Cadena que sustituye a Otro Hola Mundo");
+    var originalDiv=document.getElementsByTagName(div)[1];
+    originalDiv.parentNode.replaceChild(nuevoDiv,originalDiv);
+    alert ("Nodo modificado");
+  </script>
+</body>
+</html>

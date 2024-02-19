@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+		<script>
+			function realizarCambio() {
+
+				alert(id_enlace.title);
+
+				document.getElementById("id_enlace").title = "Nuevo título del enlace";
+
+				//document.getElementById("id_enlace").setAttribute('title', 'Nuevo título del enlace'); // Otra opción.
+
+				//id_enlace.title = "Nuevo título del enlace"; // Otra opción.
+
+				alert(id_enlace.title);
+			}
+		</script>
+	</head>
+	<body>
+		<a href="#" id="id_enlace" title="Enlace de ejemplo" onclick="realizarCambio();">Haz clic aquí</a>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo de AJAX</title>
+		<script>
+			var objetoXHR = new XMLHttpRequest();
+			
+			function obtenerDatosServidor(origen, elemento) {
+				var objeto_destino = document.getElementById(elemento);
+				
+				// Cuando se produzca un cambio en el estado del objeto, se ejecuta la función.
+				objetoXHR.onreadystatechange = respuesta;
+				
+				// Se inicializa la instancia usando el método GET (menos seguro que POST).
+				objetoXHR.open("GET", origen, true); // "true" porque es asíncrono.
+				
+				// Comunicación con XML. Envío de datos hacia el servidor en formato XML.
+				objetoXHR.setRequestHeader("Content-type", "text/xml");
+				objetoXHR.send("<documento><xml>contenido</xml><documento>");
+				
+				// En caso de trabajar con JSON, conversión de un texto JSON en un objeto JavaScript.
+				//var objeto = eval('( ' + texto_JSON + ')'); // Si el servidor es confiable.
+				var datosJSON = JSON.parse(objetoXHR.responseText); // Si el servidor no es confiable.
+				objetoXHR.send(null);
+			}
+			
+			function respuesta() {
+				if (objetoXHR.readyState == 4 && objetoXHR.status == 200) {
+					objeto_destino.innerHTML = objetoXHR.responseText;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Ejemplo de AJAX</h1>
+		<form>
+			<input type="button" value="Buscar información" onclick="obtenerDatosServidor('http://', 'elemento_destino')" />
+		</form>
+		<div id="elemento_destino">
+			<p>La información aparecerá aquí</p>
+		</div>
+	</body>
+</html>
+
+<!--
+ATENCIÓN:
+No se puede trabajar con archivos locales. Los navegadores no permiten que el código JavaScript acceda al sistema de archivos.
+El sistema de archivos local está aislado para que, por ejemplo, no se pueda hacer doble "click" en un documento HTML de un
+archivo adjunto de correo electrónico, abrirlo en el navegador y hacer que cargue los archivos privados en el servidor del remitente.
+Para probar AJAX localmente es necesario instalar SIEMPRE un servidor Web local.
+-->

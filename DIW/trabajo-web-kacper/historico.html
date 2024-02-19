@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<!-- CONTENIDO EN ESTA PAGINA: 
+    - Navegacion breadcrumb
+    - Tabla x4
+    - Lista x2 -->
+<body>
+  <header class="bg-danger text-white text-center p-3">
+    <a href="index.html"><img src="imagenes/cabecera-logoCentro.png" alt="logoCentro"></a>
+    <a href="index.html"><img src="imagenes/cabecera-logoRioBreogan.png" alt="Logo del Club Baloncesto Breogán"></a>
+    <h1>Club Baloncesto Breogán</h1>
+    <p>Entidad de baloncesto en la ciudad de Lugo, España.</p>
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger d-none d-lg-block">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="calendario.html">Calendario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contactanos.html">Contactanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="historia.html">Historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="historico.html">Historico</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="imagenes.html">Imagenes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="noticias.html">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="plantilla.html">Plantilla</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="sobreNosotros.html">Sobre nosotros</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-light bg-danger border-top border-bottom border-white d-lg-none">
+    <div class="d-flex justify-content-between align-items-center">
+      <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-white" href="index.html">MENÚ</a>
+    </div>
+  </nav>
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-white p-4 border-bottom border-danger">
+      <ul class="navbar-nav mx-auto">
+        <li><a href="index.html" class="h4 text-danger text-decoration-none">INICIO</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="calendario.html" class="h4 text-danger text-decoration-none">CALENDARIO</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="contactanos.html" class="h4 text-danger text-decoration-none">CONTACTANOS</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="historia.html" class="h4 text-danger text-decoration-none">HISTORIA</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="historico.html" class="h4 text-danger text-decoration-none">HISTORICO</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="imagenes.html" class="h4 text-danger text-decoration-none">IMAGENES</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="noticias.html" class="h4 text-danger text-decoration-none">NOTICIAS</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="plantilla.html" class="h4 text-danger text-decoration-none">PLANTILLA</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="productos.html" class="h4 text-danger text-decoration-none">PRODUCTOS</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="sobreNosotros.html" class="h4 text-danger text-decoration-none">SOBRE NOSOTROS</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navegacion breadcrumb -->
+  <div class="container my-4 d-none d-md-block">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">INICIO</a></li>
+        <li class="breadcrumb-item active" aria-current="page">HISTORICO</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container my-4">
+    <h3 class="text-center">HISTORICO</h3>
+    <p class="text-center">Aquí podrás ver diferentes tablas y listas con el ranking de diferentes secciones del club.</p>
+    <!-- Añadimos un párrafo que se mostrará solo en dispositivos móviles pequeños -->
+    <p class="text-center d-block d-sm-none">Las tablas en formato móvil no se ven</p>
+</div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Primera sección -->
+      <div class="col">
+        <div class="container my-4 d-none d-md-block">
+          <h2 class="text-center">PUNTOS</h2>
+          <p class="text-center">Máximos anotadores en partidos oficiales con el club</p>
+        </div>
+
+        <!-- Tabla -->
+        <table class="table table-dark d-none d-sm-table">
+          <thead>
+            <tr>
+              <th scope="col">RANKING</th>
+              <th scope="col">NOMBRE COMPLETO</th>
+              <th scope="col">PUNTOS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Manel Sanchez</td>
+              <td>4302</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Devin Davis</td>
+              <td>2809</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Claude Riley</td>
+              <td>2160</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Jim Wright</td>
+              <td>1254</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Segunda sección -->
+      <div class="col">
+        <div class="container my-4 d-none d-md-block">
+          <h3 class="text-center">PARTIDOS</h3>
+          <p class="text-center">Jugadores con más partidos oficiales con el club</p>
+        </div>
+
+        <!-- Tabla -->
+        <table class="table table-striped d-none d-sm-table">
+          <thead>
+            <tr>
+              <th scope="col">RANKING</th>
+              <th scope="col">NOMBRE COMPLETO</th>
+              <th scope="col">PARTIDOS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Manel Sanchez</td>
+              <td>213</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Devin Davis</td>
+              <td>198</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>J.M Alonso: 152</td>
+              <td>152</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Óscar Peña</td>
+              <td>140</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <!-- Primera sección -->
+    <div class="col">
+      <div class="container my-4 d-none d-md-block">
+        <h3 class="text-center">TRIPLES</h3>
+        <p class="text-center">Jugadores con más triples encestados en partidos oficiales con el club</p>
+      </div>
+
+      <!-- Tabla -->
+      <table class="table d-none d-sm-table">
+        <thead>
+          <tr>
+            <th scope="col">RANKING</th>
+            <th scope="col">NOMBRE COMPLETO</th>
+            <th scope="col">Nº DE TRIPLES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Manel Sánchez</td>
+            <td>480</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacobo Odriozola</td>
+            <td>130</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>J.M. Cabezudo</td>
+            <td>128</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Segunda sección -->
+    <div class="col">
+      <div class="container my-4 d-none d-md-block">
+        <h3 class="text-center">MINUTOS</h3>
+        <p class="text-center">Jugadores con más minutos disputados en partidos oficiales con el club</p>
+      </div>
+
+      <!-- Tabla -->
+      <table class="table d-none d-sm-table">
+        <thead>
+          <tr>
+            <th scope="col">RANKING</th>
+            <th scope="col">NOMBRE COMPLETO</th>
+            <th scope="col">Minutos disputados</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-success">
+            <th scope="row">1</th>
+            <td>Manel Sánchez</td>
+            <td>8409</td>
+          </tr>
+          <tr class="table-success">
+            <th scope="row">2</th>
+            <td>Devin Davis</td>
+            <td>6204</td>
+          </tr>
+          <tr class="table-success">
+            <th scope="row">3</th>
+            <td>J.M. Alonso</td>
+            <td>4065</td>
+          </tr>
+          <tr class="table-success">
+            <th scope="row">4</th>
+            <td>Claude Riley</td>
+            <td>3975</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container-fluid">
+  <div class="row">
+    <!-- Primera sección -->
+    <div class="col">
+      <div class="container my-4 d-none d-md-block">
+        <h3 class="text-center">TAPONES</h3>
+        <p class="text-center">Listado de los mejores taponeadores de la hoistoria del equipo gallego en partidos
+          oficiales con el club</p>
+      </div>
+
+      <!-- Lista -->
+      <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action active">Michel Diouf, 98 tapones</button>
+        <button type="button" class="list-group-item list-group-item-action">Ken Orange, 92 tapones</button>
+        <button type="button" class="list-group-item list-group-item-action">George Singleton, 87 tapones</button>
+        <button type="button" class="list-group-item list-group-item-action">Jim Wright, 86 tapones</button>
+      </div>
+    </div>
+
+    <!-- Segunda sección -->
+    <div class="col">
+      <div class="container my-4 d-none d-md-block">
+        <h3 class="text-center">HISTORICO POR PARTIDO</h3>
+        <p class="text-center">Una lista con las mejores estadisticas que se han realizado en un solo partido de un
+          jugador</p>
+      </div>
+
+      <!-- Lista -->
+      <ul class="list-group">
+        <li class="list-group-item"><b>Maximo anotador en un partido:</b> Charlie Bell, 41 puntos</li>
+        <li class="list-group-item"><b>Maximo de triples en un partido:</b> Osvaldas Matulionis, 8 triples</li>
+        <li class="list-group-item"><b>Maximo de tapones en un partido:</b> Ken Orange, 7 tapones</li>
+        <li class="list-group-item"><b>Maximo de repuperaciones en un partido:</b> Xabi Roca, 9 recuperaciones</li>
+        <li class="list-group-item"><b>Maximo de repotes en un partido:</b> Greg Foster, 21 rebotes</li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <hr>
+
+  <!-- Footer -->
+  <footer class="bg-danger text-white mt-5 text-center p-3">
+    <div class="row justify-content-center mb-4">
+      <div id="seccionFooter" class="bg-white text-danger d-flex align-items-center justify-content-center">
+        <p class="text-center m-0">Bootstrap</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5>AUTORES</h5>
+        <hr>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">Daniel Alvaro del Rio</li>
+          <li class="nav-item mb-2">Teresa Esteban Gracia</li>
+          <li class="nav-item mb-2">Kacper Konarzewski</li>
+          <li class="nav-item mb-2"><b>GRUPO 3</b></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="row justify-content-center">
+          <div class="justify-content-center mb-2">
+            <h5>SECCIONES</h5>
+          </div>
+
+          <hr>
+
+          <div class="col-6 col-md-6 mb-3">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-white">Inicio</a></li>
+              <li class="nav-item mb-2"><a href="calendario.html" class="nav-link p-0 text-white">Calendario</a></li>
+              <li class="nav-item mb-2"><a href="contactanos.html" class="nav-link p-0 text-white">Contactanos</a></li>
+              <li class="nav-item mb-2"><a href="historico.html" class="nav-link p-0 text-white">Historico</a></li>
+              <li class="nav-item mb-2"><a href="imagenes.html" class="nav-link p-0 text-white">Imagenes</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-6 mb-3">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="noticias.html" class="nav-link p-0 text-white">Noticias</a></li>
+              <li class="nav-item mb-2"><a href="plantilla.html" class="nav-link p-0 text-white">Plantilla</a></li>
+              <li class="nav-item mb-2"><a href="productos.html" class="nav-link p-0 text-white">Productos</a></li>
+              <li class="nav-item mb-2"><a href="historia.html" class="nav-link p-0 text-white">Historia</a></li>
+              <li class="nav-item mb-2"><a href="sobreNosotros.html" class="nav-link p-0 text-white">Sobre nosotros</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5>Información</h5>
+        <hr>
+        <h6>Dirección oficina:</h6>
+        <p>breogan@ejemplo.com</p>
+        <br>
+        <h6>Teléfono:</h6>
+        <p>+34 976 00 00 000</p>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-center py-4 border-top">
+      <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex mr-3">
+        <li class="ms-3"><a class="text-white" href="https://twitter.com/CBBreogan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a class="text-white" href="https://www.instagram.com/cbbreogan/"><i class="bi bi-instagram"></i></a></li>
+        <li class="ms-3"><a class="text-white" href="https://www.facebook.com/CBBreoganSAD/?locale=es_ES"><i class="bi bi-facebook"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

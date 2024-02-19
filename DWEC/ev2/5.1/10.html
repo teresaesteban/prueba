@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+	<!DOCTYPE html>
+		<style>
+			body { margin: 0px; }
+
+			.contenedor {	float: left; width: 50%; }
+
+			#rojo { background-color: red; }
+			#verde { background-color: green; }
+			#amarillo { background-color: yellow; }
+			#azul { background-color: blue; }
+		</style>
+		<script>
+			function mostrarInformacion() {
+
+				alert ("Has pulsado en " + this.getAttribute("id"));
+			}
+
+			function obtenerTamañoVentanaNavegador() {
+				var dimensiones = [];
+
+				if (typeof (window.innerWidth) == 'number') {
+					// No es IE.
+					dimensiones = [window.innerWidth, window.innerHeight];
+				} else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+					// IE 6 en modo estándar (no quirks).
+					dimensiones = [document.documentElement.clientWidth, document.documentElement.clientHeight];
+				} else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+					// IE en modo quirks.
+					dimensiones = [document.body.clientWidth, document.body.clientHeight];
+				}
+				return dimensiones;
+			}
+
+			var dimensiones = obtenerTamañoVentanaNavegador();
+
+			var altura = dimensiones[1];
+			var anchura = dimensiones[0];
+
+			window.onload = function () {
+
+				var contenedores = document.getElementsByTagName("div");
+
+				for (var i = 0; i < contenedores.length; i++) {
+
+					var alturaEnPixeles = altura / 2 + "px";
+					var anchuraEnPixeles = anchura / 2 + "px";
+
+					contenedores[i].style.height = alturaEnPixeles;
+
+					contenedores[i].onclick = mostrarInformacion;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="rojo" class="contenedor"></div>
+		<div id="verde" class="contenedor"></div>
+		<div id="amarillo" class="contenedor"></div>
+		<div id="azul" class="contenedor"></div>
+	</body>
+</html>

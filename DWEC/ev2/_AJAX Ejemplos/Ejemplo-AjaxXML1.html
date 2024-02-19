@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo de AJAX con XML 1</title>
+		<script>
+			function cargarDoc() {
+				var xhr = new XMLHttpRequest();
+				
+				var array = [];
+				var resultado = document.getElementById("elemento_destino");
+				
+				xhr.onreadystatechange = function() {
+					
+					if (xhr.readyState == 4 && xhr.status == 200) {
+						// Carga archivo XML.
+						//alert("Prueba: " + xhr.responseXML);
+						array[0] = xhr.responseXML.getElementsByTagName("nombre")[0].textContent;
+						array[1] = xhr.responseXML.getElementsByTagName("apellido")[0].textContent;
+						array[2] = xhr.responseXML.getElementsByTagName("edad")[0].textContent;
+						
+						resultado.innerHTML = "<br />" + array[0] + " " + array[1] + " tiene " + array[2] + " años.";
+					}
+				};
+				
+				xhr.open("GET", "Ejemplo-AjaxXML1.xml", true);
+				//xhr.setRequestHeader("Content-type", "text/xml");
+				xhr.send(null);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Ejemplo de AJAX con XML</h1>
+		<input type="button" value="Cargar datos" onclick="cargarDoc();"/>
+		<br />
+		<div id="elemento_destino">
+			<p>La información recibida mediante AJAX aparecerá aquí.</p>
+		</div>
+	</body>
+</html>

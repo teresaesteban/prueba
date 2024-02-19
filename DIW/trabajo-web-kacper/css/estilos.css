@@ -1,0 +1,67 @@
+/*Index*/
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+.imgEscudos{
+    height: 200px;
+    width: 200px;
+}
+.carousel-item img{
+    height: 350px;
+    width: 800px;
+}
+#imagenesLista div img{
+  height: 300px;
+  width: 500px;
+}
+header img{
+    width: 100px;
+}
+
+/*contactanos*/
+form{
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 35px;
+    padding: 20px;
+    background-color: rgb(214, 214, 214);
+    border-radius: 5px;
+}
+
+/*historico*/
+.table{
+max-width: 600px;
+margin: auto;
+}
+
+.list-group{
+max-width: 600px;
+margin: auto;
+}
+
+/*noticias*/
+.tablaIdioma{
+max-width: 100px;
+margin: auto;
+}
+
+/*productos*/
+.card img{
+    height: 200px;
+}
+
+/*foother*/
+#seccionFooter{
+    height: 40px;
+    width: 200px;
+}
+
+#imagenesGaleria{
+    max-width: 1000px;
+}
+
+.imagenesSobreNosotros{
+    max-width: 300px; 
+    max-height: 200px;
+  }

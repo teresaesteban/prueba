@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<!-- CONTENIDO EN ESTA PAGINA: 
+    - Navegacion breadcrumb
+    - Tabla
+    - Alerta
+    - Formulario
+    - Ventana modal  -->
+<body>
+  <header class="bg-danger text-white text-center p-3">
+    <a href="index.html"><img src="imagenes/cabecera-logoCentro.png" alt="logoCentro"></a>
+    <a href="index.html"><img src="imagenes/cabecera-logoRioBreogan.png" alt="Logo del Club Baloncesto Breogán"></a>
+    <h1>Club Baloncesto Breogán</h1>
+    <p>Entidad de baloncesto en la ciudad de Lugo, España.</p>
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger d-none d-lg-block">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="calendario.html">Calendario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contactanos.html">Contactanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="historia.html">Historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="historico.html">Historico</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="imagenes.html">Imagenes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="noticias.html">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="plantilla.html">Plantilla</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="sobreNosotros.html">Sobre nosotros</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-light bg-danger border-top border-bottom border-white d-lg-none">
+    <div class="d-flex justify-content-between align-items-center">
+      <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-white" href="index.html">MENÚ</a>
+    </div>
+  </nav>
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-white p-4 border-bottom border-danger">
+      <ul class="navbar-nav mx-auto">
+        <li><a href="index.html" class="h4 text-danger text-decoration-none">INICIO</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="calendario.html" class="h4 text-danger text-decoration-none">CALENDARIO</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="contactanos.html" class="h4 text-danger text-decoration-none">CONTACTANOS</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="historia.html" class="h4 text-danger text-decoration-none">HISTORIA</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="historico.html" class="h4 text-danger text-decoration-none">HISTORICO</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="imagenes.html" class="h4 text-danger text-decoration-none">IMAGENES</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="noticias.html" class="h4 text-danger text-decoration-none">NOTICIAS</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="plantilla.html" class="h4 text-danger text-decoration-none">PLANTILLA</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="productos.html" class="h4 text-danger text-decoration-none">PRODUCTOS</a></li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li><a href="sobreNosotros.html" class="h4 text-danger text-decoration-none">SOBRE NOSOTROS</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navegacion breadcrumb -->
+  <div class="container my-4 d-none d-md-block">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">INICIO</a></li>
+        <li class="breadcrumb-item active" aria-current="page">CONTACTANOS</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container my-4">
+    <h3 class="text-center">CONTACTANOS</h3>
+    <p class="text-center">Puedes contactar con nosotros a través del formulario que está situado debajo, a través del número de teléfono o en nuestras oficinas.</p>
+  </div>
+  
+<!-- Tabla -->
+  <div class="container my-4 d-none d-md-block">
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th scope="col">CORREO ELECTRONICO</th>
+                <th scope="col">TELEFONO</th>
+                <th scope="col">OFICINA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>breogan@ejemplo.com</td>
+                <td>+34 976 00 00 000</td>
+                <td>C/Baja 44, Lugo, Galicia</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="container my-4">
+<!-- Alerta -->
+  <div class="alert alert-primary" role="alert">
+      Los datos personales que se rellenen en el formulario estarán legislados bajo la ley <a
+          href="https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673" class="alert-link">Protección de Datos Personales y
+          garantía de los derechos digitales</a>. Pulsa para leer la ley.
+  </div>
+
+  <!-- Formulario -->
+  <form>
+      <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" placeholder="Nombre" required>
+      </div>
+      <div class="mb-3">
+          <label for="apellidos" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" placeholder="Apellidos" required>
+      </div>
+      <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" required>
+      </div>
+      <div class="mb-3">
+          <label for="selector" class="form-label">Tipo de problema</label>
+          <select id="selector" class="form-select" required>
+              <option>Problemas con las entradas</option>
+              <option>Problemas con la tienda online</option>
+              <option>Problemas con la página web</option>
+              <option>Otros</option>
+          </select>
+      </div>
+      <div class="mb-3">
+          <label for="text" class="form-label">Explicación</label>
+          <input type="text" class="form-control" placeholder="Explicación" required>
+      </div>
+      <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="casilla">
+          <label class="form-check-label" for="casilla">Aceptas las condiciones</label>
+      </div>
+      <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">Enviar</button>
+  </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">ENVIO DE DATOS</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              ¿Quieres enviar el mensaje?
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+              <button type="button" class="btn btn-primary">Sí</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="bg-danger text-white mt-5 text-center p-3">
+    <div class="row justify-content-center mb-4">
+      <div id="seccionFooter" class="bg-white text-danger d-flex align-items-center justify-content-center">
+        <p class="text-center m-0">Bootstrap</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5>AUTORES</h5>
+        <hr>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">Daniel Alvaro del Rio</li>
+          <li class="nav-item mb-2">Teresa Esteban Gracia</li>
+          <li class="nav-item mb-2">Kacper Konarzewski</li>
+          <li class="nav-item mb-2"><b>GRUPO 3</b></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="row justify-content-center">
+          <div class="justify-content-center mb-2">
+            <h5>SECCIONES</h5>
+          </div>
+
+          <hr>
+
+          <div class="col-6 col-md-6 mb-3">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-white">Inicio</a></li>
+              <li class="nav-item mb-2"><a href="calendario.html" class="nav-link p-0 text-white">Calendario</a></li>
+              <li class="nav-item mb-2"><a href="contactanos.html" class="nav-link p-0 text-white">Contactanos</a></li>
+              <li class="nav-item mb-2"><a href="historico.html" class="nav-link p-0 text-white">Historico</a></li>
+              <li class="nav-item mb-2"><a href="imagenes.html" class="nav-link p-0 text-white">Imagenes</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-6 mb-3">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="noticias.html" class="nav-link p-0 text-white">Noticias</a></li>
+              <li class="nav-item mb-2"><a href="plantilla.html" class="nav-link p-0 text-white">Plantilla</a></li>
+              <li class="nav-item mb-2"><a href="productos.html" class="nav-link p-0 text-white">Productos</a></li>
+              <li class="nav-item mb-2"><a href="historia.html" class="nav-link p-0 text-white">Historia</a></li>
+              <li class="nav-item mb-2"><a href="sobreNosotros.html" class="nav-link p-0 text-white">Sobre nosotros</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5>Información</h5>
+        <hr>
+        <h6>Dirección oficina:</h6>
+        <p>breogan@ejemplo.com</p>
+        <br>
+        <h6>Teléfono:</h6>
+        <p>+34 976 00 00 000</p>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-center py-4 border-top">
+      <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex mr-3">
+        <li class="ms-3"><a class="text-white" href="https://twitter.com/CBBreogan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a class="text-white" href="https://www.instagram.com/cbbreogan/"><i class="bi bi-instagram"></i></a></li>
+        <li class="ms-3"><a class="text-white" href="https://www.facebook.com/CBBreoganSAD/?locale=es_ES"><i class="bi bi-facebook"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
